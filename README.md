@@ -1,6 +1,6 @@
 # Recursia: Recursive Self-Improvement for Robot Manipulation
 
-[Project Page](https://lfrlll.github.io/Recursia/) &ensp;|&ensp; [Real-Robot Quick Start](recursia/real/README.md) &ensp;|&ensp; [Simulation](recursia/sim/README.md)
+[Project Page](https://cocacola-lab.github.io/Recursia-website/) &ensp;|&ensp; [Real-Robot Quick Start](recursia/real/README.md) &ensp;|&ensp; [Simulation](recursia/sim/README.md)
 
 Recursia improves a shared executable Python stack from source-task feedback,
 then reuses the frozen stack on new task compositions. Improvements persist as
