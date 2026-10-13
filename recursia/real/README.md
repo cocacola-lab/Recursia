@@ -50,7 +50,7 @@ Use Linux x86_64 with Conda installed. Create and activate the `recursia`
 environment from a fresh checkout:
 
 ```bash
-git clone https://github.com/cyzhuoda/Recursia.git
+git clone https://github.com/cocacola-lab/Recursia.git
 cd Recursia/recursia/real
 conda env create -f environment.yml
 conda activate recursia

@@ -14,7 +14,7 @@ Hand, including a Skill Document Only (SD-only) baseline. Simulation code will b
 Create the environment for the Franka FR3 workspace:
 
 ```bash
-git clone https://github.com/cyzhuoda/Recursia.git
+git clone https://github.com/cocacola-lab/Recursia.git
 cd Recursia/recursia/real
 conda env create -f environment.yml
 conda activate recursia
