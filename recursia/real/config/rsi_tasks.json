@@ -1,0 +1,237 @@
+{
+  "tasks": [
+    {
+      "id": "S1",
+      "split": "source",
+      "instruction": "put the mug in the basket",
+      "objects": [
+        {
+          "name": "mug",
+          "prompt": "mug"
+        },
+        {
+          "name": "basket",
+          "prompt": "basket"
+        }
+      ],
+      "goals": [
+        {
+          "relation": "in",
+          "object": "mug",
+          "target": "basket"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "split": "source",
+      "instruction": "put the carton of milk in the basket",
+      "objects": [
+        {
+          "name": "carton of milk",
+          "prompt": "carton of milk"
+        },
+        {
+          "name": "basket",
+          "prompt": "basket"
+        }
+      ],
+      "goals": [
+        {
+          "relation": "in",
+          "object": "carton of milk",
+          "target": "basket"
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "split": "source",
+      "instruction": "put the white mug on the left plate",
+      "objects": [
+        {
+          "name": "white mug",
+          "prompt": "white mug"
+        },
+        {
+          "name": "left plate",
+          "prompt": "plate",
+          "side": "left"
+        }
+      ],
+      "goals": [
+        {
+          "relation": "on",
+          "object": "white mug",
+          "target": "left plate"
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "split": "source",
+      "instruction": "put the blue mug on the right plate",
+      "objects": [
+        {
+          "name": "blue mug",
+          "prompt": "blue mug"
+        },
+        {
+          "name": "right plate",
+          "prompt": "plate",
+          "side": "right"
+        }
+      ],
+      "goals": [
+        {
+          "relation": "on",
+          "object": "blue mug",
+          "target": "right plate"
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "split": "source",
+      "instruction": "put the plastic bowl on the plate",
+      "objects": [
+        {
+          "name": "plastic bowl",
+          "prompt": "plastic bowl"
+        },
+        {
+          "name": "plate",
+          "prompt": "plate"
+        }
+      ],
+      "goals": [
+        {
+          "relation": "on",
+          "object": "plastic bowl",
+          "target": "plate"
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "split": "source",
+      "instruction": "put the mug in the plastic bowl",
+      "objects": [
+        {
+          "name": "mug",
+          "prompt": "mug"
+        },
+        {
+          "name": "plastic bowl",
+          "prompt": "plastic bowl"
+        }
+      ],
+      "goals": [
+        {
+          "relation": "in",
+          "object": "mug",
+          "target": "plastic bowl"
+        }
+      ]
+    },
+    {
+      "id": "T1",
+      "split": "target",
+      "instruction": "put both the mug and the carton of milk in the basket",
+      "objects": [
+        {
+          "name": "mug",
+          "prompt": "mug"
+        },
+        {
+          "name": "carton of milk",
+          "prompt": "carton of milk"
+        },
+        {
+          "name": "basket",
+          "prompt": "basket"
+        }
+      ],
+      "goals": [
+        {
+          "relation": "in",
+          "object": "mug",
+          "target": "basket"
+        },
+        {
+          "relation": "in",
+          "object": "carton of milk",
+          "target": "basket"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "split": "target",
+      "instruction": "put the blue mug on the left plate and put the white mug on the right plate",
+      "objects": [
+        {
+          "name": "blue mug",
+          "prompt": "blue mug"
+        },
+        {
+          "name": "left plate",
+          "prompt": "plate",
+          "side": "left"
+        },
+        {
+          "name": "white mug",
+          "prompt": "white mug"
+        },
+        {
+          "name": "right plate",
+          "prompt": "plate",
+          "side": "right"
+        }
+      ],
+      "goals": [
+        {
+          "relation": "on",
+          "object": "blue mug",
+          "target": "left plate"
+        },
+        {
+          "relation": "on",
+          "object": "white mug",
+          "target": "right plate"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "split": "target",
+      "instruction": "first put the plastic bowl on the plate, then put the mug in the plastic bowl",
+      "objects": [
+        {
+          "name": "plastic bowl",
+          "prompt": "plastic bowl"
+        },
+        {
+          "name": "plate",
+          "prompt": "plate"
+        },
+        {
+          "name": "mug",
+          "prompt": "mug"
+        }
+      ],
+      "goals": [
+        {
+          "relation": "on",
+          "object": "plastic bowl",
+          "target": "plate"
+        },
+        {
+          "relation": "in",
+          "object": "mug",
+          "target": "plastic bowl"
+        }
+      ]
+    }
+  ]
+}

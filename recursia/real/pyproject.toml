@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recursia"
+version = "0.1.0"
+description = "Recursive self-improvement for real-world robot manipulation."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = {file = "LICENSE"}
+dependencies = [
+  "numpy==1.26.4",
+  "scipy==1.11.4",
+  "opencv-contrib-python==4.10.0.84",
+  "PyYAML==6.0.3",
+]
+
+[project.optional-dependencies]
+test = ["pytest==7.4.4"]
+hardware = ["pyrealsense2==2.58.2.10647; sys_platform == 'linux'", "mujoco==3.10.0", "franky-control==2.0.0"]
+vision = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "pillow>=10"]
+
+[tool.setuptools.packages.find]
+include = ["cap*", "robot*", "tools*"]
+
+[tool.setuptools.package-data]
+"cap.agent.rsi.simulation" = ["SOURCE.json"]
+"robot.franka" = ["model/*.xml", "model/LICENSE", "model/README.md", "model/assets/*.obj", "model/assets/*.stl"]
+
+[tool.pytest.ini_options]
+testpaths = ["cap/agent/rsi", "cap/saved_scripts/fr3_placement", "cap/saved_scripts/fr3_runtime/test_ik_joint.py"]

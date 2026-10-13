@@ -1,0 +1,32 @@
+{
+  "source_commit": "95e6f101f04145220d811bd533a12138ea5ac056",
+  "sources": {
+    "cap/envs/trial.py": "aea2a0ae6f7791b3422cd1b2131d51a8d6e2a4809004f5ff9952fe79afe10866",
+    "cap/envs/tasks/base.py": "a27f9378d0d954bcee3d86a14065cc54b8136ee328bf4c2bd9dd105c98a6aee5",
+    "cap/utils/launch_utils.py": "5f62755053843a07cc718a4b83aff0fae0c369030ad59d8bb07b89ba42dfc0e3",
+    "cap/skills/library.py": "f6c1721e167ccd0c28c8b301c03ff561730fd5a8c17531662f5d80ba76be0cd2",
+    "cap/skills/extractor.py": "527b8b2f5c0e025bb63f7e34aac94a8716742211fcf39b912455ea82374fa792",
+    "env_configs/robosuite/spill_wipe_multimodel_aspire_traced.yaml": "c6cecc90fac1085cd006e28458f87c8206534676b21acde46fbbe0407d510d1f"
+  },
+  "adaptations": [
+    "Replace simulator env.step with FR3 tool namespace and fresh dual RGB-D captures.",
+    "Use the isolated campaign model/provider instead of simulator model-server clients.",
+    "Keep physical-controller faults and camera loss terminal for execution; ordinary code errors reach the model.",
+    "Use current front/wrist RGB images; ensemble and image/video differencing remain simulator-specific optional integrations.",
+    "Physical scene reset is external; a new trial resets Python variables, not physical object positions.",
+    "One command executes one task; REGENERATE repairs the remaining code and FINISH ends motion, without outer trial or multi-seed scheduling.",
+    "Initial code and skill-injection errors reach the executor feedback loop instead of being rejected before rollout; capability checks still run before a code block executes.",
+    "Adapt source-only fix-loop findings and topical skill merging into learning.py, preserving no-op reasons and distinguishing failure evidence from untested remedies.",
+    "Adapt before/after snapshots, exact patches and append-only promotion records into promotion.py inside each isolated method workspace; these modules are adaptations, not verbatim copies.",
+    "Frozen targets read source topic documents and promoted functions without running reflection or modifying skills.",
+    "Hardware faults force a runtime-origin FINISH without another action-model call; close hardware, retain failure evidence and permit only the existing source learning phase. Targets never learn from the fault."
+  ],
+  "standalone_checksums": {
+    "library.py": "6181f33533dc6b3a57deef8938a860cf4b405ac787a5ce48e0ab0bcecc3eb4ee",
+    "extractor.py": "527b8b2f5c0e025bb63f7e34aac94a8716742211fcf39b912455ea82374fa792"
+  },
+  "standalone_parser_ast": {
+    "_extract_code": "6679713b87ceb64c944f706bdffb99cd62112e9533ee815870eb31cd095b2040",
+    "_parse_multi_turn_decision": "48a97dc43e99bbc5dd8f5b5201af2d6dbb340531e3bef463a53370b3509b9669"
+  }
+}

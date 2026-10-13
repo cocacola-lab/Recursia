@@ -1,0 +1,9 @@
+# Copy to hardware.local.yaml and fill in your hardware identifiers.
+hardware:
+  franka:
+    ip: REPLACE_WITH_ROBOT_IP
+  cameras:
+    ext:
+      serial: REPLACE_WITH_FRONT_CAMERA_SERIAL
+    wrist:
+      serial: REPLACE_WITH_WRIST_CAMERA_SERIAL

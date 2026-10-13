@@ -1,0 +1,7 @@
+schema: aspire.fr3_station.v1
+# Supply a measured transform; null deliberately cannot pass configuration validation.
+calibration_id: REPLACE_WITH_YOUR_CALIBRATION_ID
+external_camera:
+  serial: REPLACE_WITH_YOUR_FRONT_CAMERA_SERIAL
+  optical_frame: color
+  T_base_camera_optical: null

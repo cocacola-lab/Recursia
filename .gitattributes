@@ -1,0 +1,3 @@
+# Preserve bundled mesh assets byte-for-byte and omit generated mesh diffs.
+recursia/real/robot/franka/model/assets/* binary linguist-vendored
+recursia/real/robot/franka/model/fr3.xml linguist-vendored

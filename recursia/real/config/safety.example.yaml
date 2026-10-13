@@ -1,0 +1,5 @@
+# Copy to safety.local.yaml and set bounds for your calibrated station.
+# Coordinates are in meters in the robot base frame; these are examples.
+safety:
+  cart_workspace_min_xyz: [0.10, -0.60, 0.02]
+  cart_workspace_max_xyz: [0.90, 0.60, 1.10]

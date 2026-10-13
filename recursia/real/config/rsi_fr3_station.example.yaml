@@ -1,0 +1,27 @@
+schema: aspire.fr3_manipulation.v1
+# Copy this to rsi_fr3_station.local.yaml and configure your station.
+hardware_config: hardware.local.yaml
+safety_config: safety.local.yaml
+station_model: fr3_station.local.yaml
+perception:
+  sam3_url: http://127.0.0.1:6767
+  contact_graspnet_url: http://127.0.0.1:8115
+  board_prompt: table
+gripper:
+  speed_m_s: 0.2
+  force_n: 15
+  epsilon_m: 0.010
+tool:
+  grasp_ee_offset_from_target_base_m: [0, 0, 0]
+  T_contact_graspnet_ee:
+    - [0, -1, 0, 0]
+    - [1, 0, 0, 0]
+    - [0, 0, 1, 0.1034]
+    - [0, 0, 0, 1]
+motion:
+  pose_control: ik_joint
+  relative_dynamics: [0.20, 0.05, 0.04]
+  force_limit_n: 30
+  grasp_force_limit_n: 30
+  workspace_min_m: null
+  workspace_max_m: null
