@@ -24,6 +24,7 @@ are preserved in ../LICENSE and ../NOTICE. Component-specific terms remain appli
 - franky-control and its libfranka runtime: installed from public Python distributions.
 - Python dependencies: installed through their own distributions.
 
-No learned-model checkpoint, private SDK license file, dataset, or paper
-is included. Selected physical demonstration videos are provided in assets/media/. The retained THIRD_PARTY_NOTICES.md describes
+No learned-model checkpoint, private SDK license file, or dataset is included.
+The public Recursia paper is provided in assets/Recursia.pdf; selected physical
+demonstration videos are provided in assets/media/. The retained THIRD_PARTY_NOTICES.md describes
 additional parent-repository components; those components are not included in this subset.

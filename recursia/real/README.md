@@ -139,7 +139,7 @@ describes the included marker-based refinement helper; it requires an initial
 camera transform and is not a replacement for initial calibration.
 
 The runtime prompt code is included. Independent protocol/prompt documents,
-papers, pre-trained stacks, accumulated skills, and experiment logs are excluded.
+other papers, pre-trained stacks, accumulated skills, and experiment logs are excluded.
 
 ## Service operation
 
@@ -320,6 +320,6 @@ observation capture interrupts recording to release the camera.
 
 ASPIRE copyright notices are preserved. See [LICENSE](../../LICENSE), [NOTICE](../../NOTICE),
 and [third-party licenses](../../LICENSES/THIRD_PARTY_LICENSES.md). External perception and robot SDK packages, and the bundled model assets,
-retain their own terms. This repository contains no
-paper or independent protocol/prompt documents and does not claim to reproduce the full
+retain their own terms. The public paper is available at `../../assets/Recursia.pdf`. This repository
+contains no independent protocol/prompt documents and does not claim to reproduce the full
 ASPIRE simulation benchmark.
