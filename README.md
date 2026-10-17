@@ -98,6 +98,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Run the offline tests from `recursia/rea
 changing the physical runner. Keep simulation dependencies and coordinates
 separate from real-robot configuration.
 
+## Contact
+
+For questions about Recursia, please contact
+[wjhan@bjtu.edu.cn](mailto:wjhan@bjtu.edu.cn) or
+[chenyangzhi@bjtu.edu.cn](mailto:chenyangzhi@bjtu.edu.cn).
+
 ## License
 
 Inherited ASPIRE copyright notices are retained. Project material is available
