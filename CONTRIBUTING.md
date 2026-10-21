@@ -16,7 +16,7 @@ The IK test uses the bundled FR3 model and MuJoCo installed by `environment.yml`
 Tests do not require a live robot.
 
 Preserve source/target isolation and upstream copyright notices. Keep local
-configuration, credentials, weights, logs, raw recordings, other papers, and independent
+configuration, credentials, weights, logs, raw recordings, papers, and independent
 protocol documents out of commits. Use English for documentation and messages.
 
 Simulation contributions belong under `recursia/sim/` and should include their own setup

@@ -1,6 +1,6 @@
 # Recursia: Recursive Self-Improvement for Robot Manipulation
 
-[Project Page](https://cocacola-lab.github.io/Recursia-website/) &ensp;|&ensp; [Paper](https://github.com/cocacola-lab/Recursia/raw/refs/heads/main/assets/Recursia.pdf) &ensp;|&ensp; [Real-Robot Quick Start](recursia/real/README.md) &ensp;|&ensp; [Simulation](recursia/sim/README.md)
+[Project Page](https://cocacola-lab.github.io/Recursia-website/) &ensp;|&ensp; [Paper](https://arxiv.org/abs/2610.24464) &ensp;|&ensp; [Real-Robot Quick Start](recursia/real/README.md) &ensp;|&ensp; [Simulation](recursia/sim/README.md)
 
 Recursia improves a shared executable Python stack from source-task feedback,
 then reuses the frozen stack on new task compositions. Improvements persist as
@@ -79,16 +79,14 @@ Recursia/
 │   │   ├── pyproject.toml
 │   │   └── run_agent.py
 │   └── sim/              # Reserved for future simulation experiments
-├── assets/
-│   ├── Recursia.pdf      # Downloadable paper
-│   └── media/            # Selected target demonstration videos
+├── assets/media/         # Selected target demonstration videos
 ├── LICENSES/
 ├── LICENSE
 ├── NOTICE
 └── README.md
 ```
 
-Logs, raw experiment recordings, model checkpoints, local station configurations, other papers, and
+Logs, raw experiment recordings, model checkpoints, local station configurations, papers, and
 independent experiment protocol documents are excluded from this repository.
 Runtime prompt code required by the agents is included.
 

@@ -25,6 +25,6 @@ are preserved in ../LICENSE and ../NOTICE. Component-specific terms remain appli
 - Python dependencies: installed through their own distributions.
 
 No learned-model checkpoint, private SDK license file, or dataset is included.
-The public Recursia paper is provided in assets/Recursia.pdf; selected physical
+The public Recursia paper is available on [arXiv](https://arxiv.org/abs/2610.24464); selected physical
 demonstration videos are provided in assets/media/. The retained THIRD_PARTY_NOTICES.md describes
 additional parent-repository components; those components are not included in this subset.

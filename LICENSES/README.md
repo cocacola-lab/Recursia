@@ -5,5 +5,5 @@ root. This subset also retains the upstream third-party notices and relevant
 license texts. See THIRD_PARTY_LICENSES.md for the subset inventory.
 
 This repository distributes no Git submodules, model checkpoints, vendor SDKs,
-station CAD or datasets. The public Recursia paper is included under
-assets/Recursia.pdf, with selected demonstration media under assets/media/.
+station CAD or datasets. The public Recursia paper is available on
+[arXiv](https://arxiv.org/abs/2610.24464), with selected demonstration media under assets/media/.
