@@ -110,17 +110,16 @@ See [NOTICE](NOTICE) and the [license inventory](LICENSES/README.md).
 
 ## Citation
 
-This implementation builds on ASPIRE. Please acknowledge the upstream work
-when using its inherited components:
+If you find Recursia useful in your research, please cite:
 
 ```bibtex
-@article{lu2026aspire,
-  title   = {ASPIRE: Agentic /Skills Discovery for Robotics},
-  author  = {Runyu Lu and Yubo Wu and Ethan Kou and Letian Fu and Wenli Xiao and
-             Ajay Mandlekar and Yinzhen Xu and Guanya Shi and Ken Goldberg and
-             Ang Chen and Mosharaf Chowdhury and Yuke Zhu and Linxi "Jim" Fan and Guanzhi Wang},
-  year    = {2026},
-  journal = {arXiv preprint arXiv:2607.00272},
-  url     = {https://arxiv.org/abs/2607.00272}
+@misc{chen2026learningcomposerecursiveselfimprovement,
+  title         = {Learning to Compose: Recursive Self-Improvement of Shared Executable Stacks for Zero-Shot Long-Horizon Robot Manipulation},
+  author        = {Yangzhi Chen and Feiran Liu and Zishuo Wang and Zijian Jin and Xin Zhu and Lecheng Ruan and Wenjuan Han},
+  year          = {2026},
+  eprint        = {2610.24464},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url           = {https://arxiv.org/abs/2610.24464}
 }
 ```
