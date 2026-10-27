@@ -1,0 +1,3 @@
+{"t": 1793092975.3, "call": "plan_grasp", "status": "ok", "detail": null, "n_candidates": 24, "wall_s": 1.156}
+{"t": 1793093106.6, "call": "plan_grasp", "status": "ok", "detail": null, "n_candidates": 18, "wall_s": 1.182}
+{"t": 1793093133.826, "call": "plan_grasp", "status": "ok", "detail": null, "n_candidates": 15, "wall_s": 1.15}

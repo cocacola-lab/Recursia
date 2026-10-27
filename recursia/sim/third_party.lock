@@ -1,0 +1,5 @@
+# Pinned third-party sources for recursia/sim (path  url  commit). Fetched by scripts/fetch_third_party.sh into cap/third_party/.
+cap/third_party/LIBERO-PRO	https://github.com/uynitsuj/LIBERO-PRO.git	47aaa8038930bcdc84ab9ea2867e2ffc8039ab4a
+cap/third_party/libero_dependencies/robosuite	https://github.com/Max-Fu/robosuite	a498b087d4bc5a3981e3d27030d09bc537a537f3
+cap/third_party/sam3	https://github.com/facebookresearch/sam3.git	6fe87d64a5beb9084923d7a9e002741178635b09
+cap/third_party/contact_graspnet_pytorch	https://github.com/elchun/contact_graspnet_pytorch.git	2d71da4e50a04aa353352d1cae99f20f7022145b

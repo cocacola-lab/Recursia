@@ -1,0 +1,573 @@
+{
+ "attempt_id": "N20C:long1_task:s45:f3873e9d",
+ "arm": "N20C",
+ "phase": "subset_N20C",
+ "suite": "libero_10_task",
+ "task": "LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket",
+ "task_short": "long1_task",
+ "seed": 45,
+ "state_idx": 44,
+ "n_init_states": 50,
+ "policy_sha256": "dbe25f1450857b0b2c583e07d42620b98fb07da6c56d189bb66376b950511ec1",
+ "policy_path": "programs/N20C.py",
+ "task_language": "put both the alphabet soup and the butter in the basket",
+ "task_descriptors": {
+  "objects": {
+   "alphabet soup": [
+    "alphabet soup",
+    "soup can",
+    "can"
+   ],
+   "butter": [
+    "butter",
+    "butter box",
+    "yellow box"
+   ]
+  },
+  "supports": {
+   "basket": [
+    "basket",
+    "wicker basket"
+   ]
+  },
+  "articulated": {},
+  "side_words": {
+   "left": "min",
+   "right": "max",
+   "front": "xmin",
+   "back": "xmax",
+   "middle": "mid",
+   "top": "zmax",
+   "bottom": "zmin"
+  },
+  "language_templates": [
+   {
+    "relation": "in",
+    "regex": "put both the (.+?) and the (.+?) in the (basket|tray)$",
+    "two_objects": true
+   },
+   {
+    "relation": "on",
+    "regex": "put both (.+?)s on the (.+)$",
+    "two_instances": true
+   },
+   {
+    "relation": "beside",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it )?to the (left|right|front|back) of the (.+)$"
+   },
+   {
+    "relation": "beside",
+    "regex": "pick up the (.+?) and place it to the (right|left|front|back) compartment of the (.+)$"
+   },
+   {
+    "relation": "in_part",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?in the (front|back|left|right) compartment of the (.+)$"
+   },
+   {
+    "relation": "in_sliding",
+    "regex": "put the (.+?) (?:at the (front|back) )?in the (top|bottom) drawer of the (cabinet)$"
+   },
+   {
+    "relation": "in_hinged",
+    "regex": "put the (.+?) in the (microwave)$"
+   },
+   {
+    "relation": "in",
+    "regex": "(?:pick up|put) the (.+?) (?:and put it |and place it )?in the (basket|tray)$"
+   },
+   {
+    "relation": "in_layer",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?(on|under) the (cabinet shelf|shelf)$"
+   },
+   {
+    "relation": "on",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it )?on top of the (.+)$"
+   },
+   {
+    "relation": "on",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?(?:at the (front|back) |in the (middle) )?on the (left|right)? ?(plate|stove|wine rack|cabinet)$"
+   },
+   {
+    "relation": "on",
+    "regex": "stack the (.+?) on the (.+)$"
+   },
+   {
+    "relation": "open_articulated",
+    "regex": "open the (top|bottom)? ?(drawer)(?: of the cabinet)?$|open the (microwave)$"
+   },
+   {
+    "relation": "close_articulated",
+    "regex": "close the (top|bottom)? ?(drawer)(?: of the cabinet)?$|close the (microwave)$"
+   },
+   {
+    "relation": "actuate_on",
+    "regex": "turn on the (stove)$"
+   },
+   {
+    "relation": "actuate_off",
+    "regex": "turn off the (stove)$"
+   }
+  ],
+  "anaphora_templates": [
+   {
+    "relation": "close_articulated",
+    "regex": "close it$",
+    "refers": "part"
+   },
+   {
+    "relation": "open_articulated",
+    "regex": "open it$",
+    "refers": "part"
+   },
+   {
+    "relation": "in",
+    "regex": "(?:put|place) (?:it|them) in the (basket|tray)$",
+    "refers": "object"
+   },
+   {
+    "relation": "on",
+    "regex": "put the (.+?) on it$",
+    "refers": "support"
+   },
+   {
+    "relation": "on",
+    "regex": "put the (.+?) on top of it$",
+    "refers": "part"
+   },
+   {
+    "relation": "in_sliding",
+    "regex": "put the (.+?) in it$",
+    "refers": "part"
+   }
+  ],
+  "support_prompts": [
+   "basket",
+   "wicker basket"
+  ]
+ },
+ "official_task_completed": 1,
+ "sandbox_rc": 0,
+ "reward": 1.0,
+ "terminated": true,
+ "truncated": false,
+ "policy_duration_s": 389.8,
+ "env_setup_s": 18.1,
+ "final_sim_step": 1775,
+ "final_official_predicates": [
+  {
+   "predicate": [
+    "in",
+    "alphabet_soup_1",
+    "basket_1_contain_region"
+   ],
+   "value": true
+  },
+  {
+   "predicate": [
+    "in",
+    "butter_1",
+    "basket_1_contain_region"
+   ],
+   "value": true
+  }
+ ],
+ "final_official_full_success": true,
+ "stderr_tail": "<frozen_policy>:534: RuntimeWarning: All-NaN slice encountered\n",
+ "gpu": "3",
+ "timestamp": "2026-10-27T16:48:10",
+ "model_calls": 4,
+ "vlm_stats": {
+  "calls": 4,
+  "ok": 4,
+  "abstain_or_error": 0,
+  "cost_usd": 0.041512,
+  "latency_s": 61.35
+ },
+ "motion_interface_stats": {
+  "ik_calls": 1,
+  "ik_failed": 0,
+  "ik_fallback": 9,
+  "moves": 36,
+  "sim_steps": 844,
+  "reached": 18,
+  "not_reached": 18,
+  "status_counts": {
+   "uncertain": 18,
+   "reached": 18
+  },
+  "jit_s": 4.650657653808594
+ },
+ "contact_primitive_stats": {
+  "calls": 6,
+  "sim_steps": 507,
+  "status_counts": {
+   "failed": 1,
+   "reached": 5
+  },
+  "success": 5,
+  "non_success": 1
+ },
+ "gate_stats": {
+  "decisions": 7,
+  "refusals": 1,
+  "violations": 0,
+  "allowed_by_action": {
+   "close": 2,
+   "lift": 2,
+   "transport": 0,
+   "release": 2
+  }
+ },
+ "placement_gate_stats": {
+  "allow_success": 0,
+  "release_on_uncertain": 0,
+  "refused_failed": 0,
+  "refused_uncertain": 0,
+  "refused_descent": 0,
+  "refused_no_verdict": 0,
+  "refused_no_touchdown": 0,
+  "violations": 0,
+  "decisions": 0
+ },
+ "home_motion_stats": {
+  "calls": 4,
+  "reached": 4,
+  "not_reached": 0,
+  "refused": 0,
+  "sim_steps": 204,
+  "status_counts": {
+   "reached": 4
+  },
+  "production_calls": 4
+ },
+ "adapter_revision": "runtime_language_v3_20260928",
+ "descriptor_sha256": "8074e7f582f440f80aea575b38c2d5f30b82d8b4ee7e74c131da84480dccdd86",
+ "adapter_files_sha256": {
+  "adapter_v3.py": "1f4979b2c7fe56b433cb0043fea30004bb2a1b5b856b8d7c5e6bdd2690c9ed1d",
+  "adapter_lexicon_v3.json": "40432399e6816f76b534402d0283477cdf200b7c4555bca401364745964a5600"
+ },
+ "harness_revision": "n8_clean_horizon_v1",
+ "failure_class": null,
+ "horizon_exhausted": false,
+ "orch_summary": {
+  "arm_mode": "closed_loop_llm_orchestration",
+  "method": "inference method only; the learned stack is N20",
+  "cl_version": "n20c_closed_loop_v1_20261016",
+  "stack": {
+   "id": "N20",
+   "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+  },
+  "interface_version": "rsi_n20_iface_v2_20261016",
+  "code_hashes": {
+   "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+   "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+   "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+  },
+  "language": "put both the alphabet soup and the butter in the basket",
+  "replace_enabled": true,
+  "step_cost": 1109,
+  "fallback_to_baseline": false,
+  "outcome": "all_controls_completed",
+  "llm_calls": [
+   {
+    "tag": "cl_plan_0",
+    "status": "ok",
+    "cost_usd": 0.065568,
+    "usage": {
+     "input_tokens": 15422,
+     "output_tokens": 194,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSShPWoALgEfutB1BDkx",
+    "latency_s": 7.19,
+    "prompt_sha256": "c82b42014d9f416981f7d71f9ef8e3d000e63f6d534ae0751f92af2ef777757a",
+    "sim_step": 10
+   },
+   {
+    "tag": "cl_decide_0_0",
+    "status": "ok",
+    "cost_usd": 0.011324,
+    "usage": {
+     "input_tokens": 2486,
+     "output_tokens": 69,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSSox63McUVRcS6KKx2A",
+    "latency_s": 3.16,
+    "prompt_sha256": "0268471a9220ac9ed3b56d3a642c7ad485a2a1c1da4fd10659c2aaea097543bb",
+    "sim_step": 10
+   },
+   {
+    "tag": "cl_verify_sg1",
+    "status": "ok",
+    "cost_usd": 0.007911999999999999,
+    "usage": {
+     "input_tokens": 1623,
+     "output_tokens": 71,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgST1anTZ4HQPj6CQQw4d",
+    "latency_s": 7.1,
+    "prompt_sha256": "9ea5c58b0ad720ff3052b3873062f0d88a1ba5de66e0200b96a3ed175138a62f",
+    "sim_step": 1072
+   },
+   {
+    "tag": "cl_decide_1_0",
+    "status": "ok",
+    "cost_usd": 0.01196,
+    "usage": {
+     "input_tokens": 2545,
+     "output_tokens": 89,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgST1nmnSj1WnRiNFegQk",
+    "latency_s": 2.87,
+    "prompt_sha256": "4184bce2edc83859612e2fe1666324aea64ae52e602134a99ee53872252dcbfb",
+    "sim_step": 1072
+   },
+   {
+    "tag": "cl_verify_sg2",
+    "status": "ok",
+    "cost_usd": 0.0076760000000000005,
+    "usage": {
+     "input_tokens": 1619,
+     "output_tokens": 60,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTAybffiKKXj2S8ygKv",
+    "latency_s": 11.46,
+    "prompt_sha256": "939b80489f0181e6dbd42320b6ed1fb28dd343fcf388ff669a9c10b30d228340",
+    "sim_step": 1775
+   },
+   {
+    "tag": "cl_decide_2_0",
+    "status": "ok",
+    "cost_usd": 0.011463999999999998,
+    "usage": {
+     "input_tokens": 2521,
+     "output_tokens": 69,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTBCDSKHRv9NmF95XZF",
+    "latency_s": 4.83,
+    "prompt_sha256": "1096629fc6fa6ba998a3d243fba5003d490f15937118ea72321f5ae39239d5c7",
+    "sim_step": 1775
+   },
+   {
+    "tag": "cl_verify_sg1",
+    "status": "ok",
+    "cost_usd": 0.007771999999999999,
+    "usage": {
+     "input_tokens": 1623,
+     "output_tokens": 64,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTBXZ2ErCGNxeEZfHVk",
+    "latency_s": 3.24,
+    "prompt_sha256": "9ea5c58b0ad720ff3052b3873062f0d88a1ba5de66e0200b96a3ed175138a62f",
+    "sim_step": 1775
+   },
+   {
+    "tag": "cl_verify_sg2",
+    "status": "ok",
+    "cost_usd": 0.007436,
+    "usage": {
+     "input_tokens": 1619,
+     "output_tokens": 48,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTBn3AfS2J9KKnpCUD7",
+    "latency_s": 2.59,
+    "prompt_sha256": "939b80489f0181e6dbd42320b6ed1fb28dd343fcf388ff669a9c10b30d228340",
+    "sim_step": 1775
+   }
+  ],
+  "decisions": [
+   {
+    "action": "execute",
+    "subgoal": "sg1",
+    "reason": "Nothing has run yet and the budget covers both subgoals, so start the plan with sg1 and put the alphabet soup in the basket.",
+    "n": 0,
+    "sim_step": 10
+   },
+   {
+    "action": "execute",
+    "subgoal": "sg2",
+    "reason": "The alphabet soup can now sits in the basket and the check confirms it, so the next step is the pending butter subgoal, and the 2928 remaining steps cover one more attempt of about 1109.",
+    "n": 1,
+    "sim_step": 1072
+   },
+   {
+    "action": "stop",
+    "subgoal": null,
+    "reason": "Both subgoals completed with visual checks 'yes', and image 2 shows the alphabet soup and butter in the basket, so the task is done.",
+    "n": 2,
+    "sim_step": 1775
+   }
+  ],
+  "checks": [
+   {
+    "subgoal": "sg1",
+    "clause": "the alphabet soup is inside the basket",
+    "verdict": "yes",
+    "evidence": "The blue-labeled alphabet soup can, which stood beside the ketchup in image 1, is gone from the table, and a dark can top is now visible inside the basket.",
+    "sim_step": 1072
+   },
+   {
+    "subgoal": "sg2",
+    "clause": "the butter is inside the basket",
+    "verdict": "yes",
+    "evidence": "The butter box, which sat on the table in front of the red can in image 1, is gone from there and now appears inside the basket, within its walls.",
+    "sim_step": 1775
+   },
+   {
+    "subgoal": "sg1",
+    "clause": "the alphabet soup is inside the basket",
+    "verdict": "yes",
+    "evidence": "The blue alphabet soup can is gone from its starting spot near the juice. A dark round can top is now visible inside the basket next to the butter box.",
+    "sim_step": 1775
+   },
+   {
+    "subgoal": "sg2",
+    "clause": "the butter is inside the basket",
+    "verdict": "yes",
+    "evidence": "The butter box, gone from its spot on the table, now sits inside the basket beside the soup can.",
+    "sim_step": 1775
+   }
+  ],
+  "prompt_sha256": {
+   "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+   "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+   "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+  },
+  "plan_attempts": [
+   {
+    "plan_notes": "Two placements into the basket, following the instruction's order: first the alphabet soup, then the butter. The basket is an open container, so no preparatory action is needed. The 'in' relation takes no side word, so side and the other unused arguments are null.",
+    "subgoals": [
+     {
+      "relation": "in",
+      "object": "alphabet soup",
+      "reference": "basket",
+      "part": null,
+      "side": null,
+      "object_side": null,
+      "instance": null
+     },
+     {
+      "relation": "in",
+      "object": "butter",
+      "reference": "basket",
+      "part": null,
+      "side": null,
+      "object_side": null,
+      "instance": null
+     }
+    ]
+   }
+  ],
+  "n_stack_calls": 6,
+  "plan": [
+   "sg1",
+   "sg2"
+  ],
+  "retries": {},
+  "replaced": {},
+  "stack_exception": null,
+  "results": {
+   "sg1": {
+    "status": "control_completed",
+    "failure_reason": null,
+    "verification_status": "shadow_recorded_only",
+    "object_possibly_retained": false,
+    "retry": false,
+    "replace": null
+   },
+   "sg2": {
+    "status": "control_completed",
+    "failure_reason": null,
+    "verification_status": "shadow_recorded_only",
+    "object_possibly_retained": false,
+    "retry": false,
+    "replace": null
+   }
+  },
+  "final_sim_step": 1775,
+  "cost_usd": 0.13111
+ },
+ "orch_llm_stats": {
+  "calls": 8,
+  "ok": 8,
+  "abstain_or_error": 0,
+  "cost_usd": 0.131112,
+  "latency_s": 42.44000000000001,
+  "usage": [
+   {
+    "input_tokens": 15422,
+    "output_tokens": 194,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2486,
+    "output_tokens": 69,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1623,
+    "output_tokens": 71,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2545,
+    "output_tokens": 89,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1619,
+    "output_tokens": 60,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2521,
+    "output_tokens": 69,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1623,
+    "output_tokens": 64,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1619,
+    "output_tokens": 48,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  ]
+ },
+ "orch_files_sha256": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "n_events": 710,
+ "n_samples": 1765,
+ "n_obs": 78,
+ "n_marks": 52,
+ "perception_calls": 47,
+ "recorder_errors": []
+}

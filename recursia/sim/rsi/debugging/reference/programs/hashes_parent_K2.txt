@@ -1,0 +1,1 @@
+1898f9bc3c076e822718b42a1c15c15ab88a9ac487ff953d5b4de87a633bc166  programs/K2.py  # K2 = K1 + iter_2 (place_primitive; placement:relation_ignored_object_placed_on_support_centre (src_pudding first failure placement:released_relation_false; truth-corrected))

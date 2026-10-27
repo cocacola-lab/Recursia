@@ -1,0 +1,98 @@
+# recursia/sim — keep personal data, credentials, local environments and run outputs out of git.
+# (The repository root .gitignore applies too; patterns here are relative to recursia/sim.)
+
+# --- credentials and personal configuration -------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.netrc
+.pypirc
+*credentials*
+*secret*
+*.token
+token
+token.txt
+.huggingface/
+.cache/
+# local copies of run authorizations (budgets, operator); the template and reference records stay tracked
+/auth*.json
+/authorization*.json
+*.local.json
+*.local.yaml
+!rsi/debugging/harness/authorization.template.json
+
+# --- model-proxy ledgers and logs (prompt hashes, request ids, costs) -------------------------
+*ledger*.jsonl
+proxy.out
+*.pid
+
+# --- local environments, fetched sources, weights ---------------------------------------------
+.venv*/
+cap/third_party/*/
+.weights/
+.libero/
+.perception/
+
+# --- run outputs (episode recordings, model calls, frames) ------------------------------------
+outputs/
+stage_*/
+attempts_log_*.csv
+
+# --- runtime prompts used by the evaluation agents are code -----------------------------------
+# (the repository root ignores prompts/ for private documents)
+!rsi/evaluation/reference/prompts/
+
+# --- historical reference material not needed to run, test or reproduce anything ------------
+# (copied from the N19/N20 rounds; the harnesses never read these files)
+rsi/debugging/reference/round_example/
+rsi/debugging/reference/code/evaluator_amendments/
+rsi/debugging/reference/code/tests/
+rsi/*/reference/code/frozen_parent/*
+!rsi/*/reference/code/frozen_parent/diag_recorder2.py
+!rsi/*/reference/code/frozen_parent/interface_guards_parent.py
+rsi/*/reference/code/add_guards.py
+rsi/*/reference/code/analyze_90.py
+rsi/*/reference/code/analyze_90_v6.py
+rsi/*/reference/code/build_runner_90.py
+rsi/*/reference/code/generate_synthetic.py
+rsi/*/reference/code/n13_groups.json
+rsi/*/reference/code/prerelease_data.py
+rsi/*/reference/code/prerelease_vec.py
+rsi/*/reference/code/proposer_prompt_90.md
+rsi/*/reference/code/recheck_identity_90.py
+rsi/*/reference/code/regression_gate_v6.py
+rsi/*/reference/code/review_zero_motion.py
+rsi/*/reference/code/run_attempt_90.sh
+rsi/*/reference/code/run_eval.py
+rsi/*/reference/code/run_observe_90.sh
+rsi/*/reference/code/run_plan_90.sh
+rsi/*/reference/code/slip_offline.py
+rsi/*/reference/code/source_relation_coverage.py
+rsi/*/reference/code/verify_horizon_integration.py
+rsi/*/reference/code/vlm_episode_infra.py
+rsi/*/reference/code/vlm_integrity.py
+rsi/debugging/reference/code/capability_gate_n19.py
+rsi/debugging/reference/code/code_path_exemption_runtime.py
+rsi/debugging/reference/code/code_path_exemption_runtime_v3.py
+rsi/debugging/reference/code/coverage_gate_n19.py
+rsi/debugging/reference/code/n19.py
+rsi/debugging/reference/code/n19_groups.json
+rsi/debugging/reference/code/start_stage_n19.sh
+rsi/evaluation/reference/code/amend_manifest_long8.py
+rsi/evaluation/reference/code/apply_proposal_90.py
+rsi/evaluation/reference/code/gen_manifest_90.py
+rsi/evaluation/reference/code/interim100.py
+rsi/evaluation/reference/code/interim100_cl.py
+rsi/evaluation/reference/code/observe_only_90.py
+rsi/evaluation/reference/code/start_long100.sh
+rsi/evaluation/reference/code/start_orch.sh
+rsi/evaluation/reference/code/summarize_eval.py
+rsi/evaluation/reference/plan_N20C_long100.txt
+rsi/evaluation/reference/calibration/calls.jsonl
+rsi/evaluation/reference/calibration/run_calibration.py

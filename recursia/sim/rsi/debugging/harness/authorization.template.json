@@ -1,0 +1,15 @@
+{
+ "K": 10,
+ "gpus": [3, 4, 5, 6, 7],
+ "start_cap": 8000,
+ "start_reserve": 300,
+ "proposer_call_cap": 80,
+ "vlm_usd_cap": 60,
+ "episode_limits": {"steps": 4000, "timeout_s": 1500},
+ "start_program": "A0",
+ "interface": "original",
+ "start_strategy": "S_1",
+ "proxy_url": "http://127.0.0.1:8117",
+ "authorized_by": "<role, not a name>",
+ "date": "<YYYY-MM-DD>"
+}

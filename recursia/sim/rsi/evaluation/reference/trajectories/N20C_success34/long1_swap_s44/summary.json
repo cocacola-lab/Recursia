@@ -1,0 +1,253 @@
+{
+ "arm_mode": "closed_loop_llm_orchestration",
+ "method": "inference method only; the learned stack is N20",
+ "cl_version": "n20c_closed_loop_v1_20261016",
+ "stack": {
+  "id": "N20",
+  "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+ },
+ "interface_version": "rsi_n20_iface_v2_20261016",
+ "code_hashes": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "language": "put both the cream cheese box and the butter in the basket",
+ "replace_enabled": true,
+ "step_cost": 1109,
+ "fallback_to_baseline": false,
+ "outcome": "all_controls_completed",
+ "llm_calls": [
+  {
+   "tag": "cl_plan_0",
+   "status": "ok",
+   "cost_usd": 0.06536399999999999,
+   "usage": {
+    "input_tokens": 15431,
+    "output_tokens": 182,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSS8LuNWJkkFuTabBLmu",
+   "latency_s": 6.72,
+   "prompt_sha256": "386e1e5982be1a92dcf578f4fa0ea3fe6d94cb127e8ab6dcf6cba85d589acdbd",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_0_0",
+   "status": "ok",
+   "cost_usd": 0.011344,
+   "usage": {
+    "input_tokens": 2486,
+    "output_tokens": 70,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSBXcd4VLcUf38JTo5g",
+   "latency_s": 3.52,
+   "prompt_sha256": "8c88cd3a1b2bcba11a7a3129778d191a53ee8978a70cbf12c91b93c5e3256d6d",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.008152,
+   "usage": {
+    "input_tokens": 1623,
+    "output_tokens": 83,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSPjxsBX5RtDJBC5b5z",
+   "latency_s": 20.59,
+   "prompt_sha256": "8cf9948dbdd2c687d71b132c49e30a33d8e3b53bf8d12920eccb94b0c4642888",
+   "sim_step": 1088
+  },
+  {
+   "tag": "cl_decide_1_0",
+   "status": "ok",
+   "cost_usd": 0.012024,
+   "usage": {
+    "input_tokens": 2546,
+    "output_tokens": 92,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSQ8rXHU4Jg5bJaV6oP",
+   "latency_s": 3.73,
+   "prompt_sha256": "dbaded8fc4dabbcbf2d09cf629387b9bd81d53dc7e49c32d1dc93fdaee598ed6",
+   "sim_step": 1088
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007656,
+   "usage": {
+    "input_tokens": 1619,
+    "output_tokens": 59,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSbnTGuFemWhu4vynXA",
+   "latency_s": 8.82,
+   "prompt_sha256": "1a33b367184df1b7257a3098a84f30520c67beb389a248c3bd2e67a18f2043fc",
+   "sim_step": 1965
+  },
+  {
+   "tag": "cl_decide_2_0",
+   "status": "ok",
+   "cost_usd": 0.011708,
+   "usage": {
+    "input_tokens": 2522,
+    "output_tokens": 81,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSbzU5Te2XKPngQ9XAw",
+   "latency_s": 4.0,
+   "prompt_sha256": "e03e4a18fd2269cb3391fa0b14648d199ea0a301d34cabf07d996f16202346e0",
+   "sim_step": 1965
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.007991999999999999,
+   "usage": {
+    "input_tokens": 1623,
+    "output_tokens": 75,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSScHoNeW5s2U5SfYsbv",
+   "latency_s": 3.21,
+   "prompt_sha256": "8cf9948dbdd2c687d71b132c49e30a33d8e3b53bf8d12920eccb94b0c4642888",
+   "sim_step": 1965
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007716,
+   "usage": {
+    "input_tokens": 1619,
+    "output_tokens": 62,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSScY6MALAXH4wzE3BPx",
+   "latency_s": 4.05,
+   "prompt_sha256": "1a33b367184df1b7257a3098a84f30520c67beb389a248c3bd2e67a18f2043fc",
+   "sim_step": 1965
+  }
+ ],
+ "decisions": [
+  {
+   "action": "execute",
+   "subgoal": "sg1",
+   "reason": "No subgoals have run yet, the scene is unchanged, and the budget easily covers both subgoals, so start with sg1 in plan order.",
+   "n": 0,
+   "sim_step": 10
+  },
+  {
+   "action": "execute",
+   "subgoal": "sg2",
+   "reason": "The cream cheese box is no longer beside the orange juice and the basket has shifted, so sg1 looks done; sg2 (butter) is pending and the remaining 2912 steps cover one more subgoal.",
+   "n": 1,
+   "sim_step": 1088
+  },
+  {
+   "action": "stop",
+   "subgoal": null,
+   "reason": "Both subgoals finished, and image 2 shows the cream cheese box and the butter gone from the table with something visible inside the basket; no check says no, and stop is the only allowed action.",
+   "n": 2,
+   "sim_step": 1965
+  }
+ ],
+ "checks": [
+  {
+   "subgoal": "sg1",
+   "clause": "the cream cheese box is inside the basket",
+   "verdict": "unsure",
+   "evidence": "The cream cheese box, a small blue-white box beside the orange juice in image 1, is gone from that spot in image 2, but it cannot be seen inside the basket either, so its location is not confirmed.",
+   "sim_step": 1088
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the butter is inside the basket",
+   "verdict": "yes",
+   "evidence": "The small butter box near the soup can in image 1 is gone from the table in image 2, and a brownish object is visible inside the basket.",
+   "sim_step": 1965
+  },
+  {
+   "subgoal": "sg1",
+   "clause": "the cream cheese box is inside the basket",
+   "verdict": "yes",
+   "evidence": "The cream cheese box, originally beside the orange juice carton, is no longer on the table, and the basket has shifted and now shows contents inside, so the box appears to be in the basket.",
+   "sim_step": 1965
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the butter is inside the basket",
+   "verdict": "yes",
+   "evidence": "The small orange butter box that stood next to the can in image 1 is gone from the table, and an orange item is visible inside the basket in image 2.",
+   "sim_step": 1965
+  }
+ ],
+ "prompt_sha256": {
+  "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+  "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+  "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+ },
+ "plan_attempts": [
+  {
+   "plan_notes": "Two placements into the basket, in the instruction's order: first the cream cheese box, then the butter. The 'in' relation takes no side word, so side is null. The basket is open and visible on the right, so no preparatory action is needed.",
+   "subgoals": [
+    {
+     "relation": "in",
+     "object": "cream cheese box",
+     "reference": "basket",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    },
+    {
+     "relation": "in",
+     "object": "butter",
+     "reference": "basket",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    }
+   ]
+  }
+ ],
+ "n_stack_calls": 6,
+ "plan": [
+  "sg1",
+  "sg2"
+ ],
+ "retries": {},
+ "replaced": {},
+ "stack_exception": null,
+ "results": {
+  "sg1": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  },
+  "sg2": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  }
+ },
+ "final_sim_step": 1965,
+ "cost_usd": 0.13196
+}

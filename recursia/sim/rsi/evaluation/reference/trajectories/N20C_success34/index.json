@@ -1,0 +1,1024 @@
+{
+ "arm": "N20C",
+ "method": "closed",
+ "program_sha256": "dbe25f1450857b0b2c583e07d42620b98fb07da6c56d189bb66376b950511ec1",
+ "stack_sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee",
+ "runner_sha256": "c7517569e1996316f92523b570f9c139ed8a8c9070b25e7708c3dfc4bdd71b78",
+ "source_run": "rsi_zs_eval_N20C_success35_20261027",
+ "n": 34,
+ "contents": "per episode: attempt_manifest.json, stdout.txt, orchestration summary/llm/stack calls, VLM calls, binding/grasp/gate records; motion, contact truth and API-call events gzipped. Simulator truth is recorded for diagnosis only; the program never sees it.",
+ "episodes": [
+  {
+   "episode": "long0_task_s41",
+   "task": "long0_task",
+   "suite": "libero_10_task",
+   "seed": 41,
+   "state_idx": 40,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 2686,
+   "wall_s": 442,
+   "orch_outcome": "binding_failed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "replace",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "retry",
+     "sg1"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.14966,
+   "stack_vb_cost_usd": 0.05037
+  },
+  {
+   "episode": "long0_task_s42",
+   "task": "long0_task",
+   "suite": "libero_10_task",
+   "seed": 42,
+   "state_idx": 41,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1813,
+   "wall_s": 379,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13752,
+   "stack_vb_cost_usd": 0.02415
+  },
+  {
+   "episode": "long0_task_s43",
+   "task": "long0_task",
+   "suite": "libero_10_task",
+   "seed": 43,
+   "state_idx": 42,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1709,
+   "wall_s": 385,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.15361,
+   "stack_vb_cost_usd": 0.02341
+  },
+  {
+   "episode": "long0_task_s44",
+   "task": "long0_task",
+   "suite": "libero_10_task",
+   "seed": 44,
+   "state_idx": 43,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 2566,
+   "wall_s": 413,
+   "orch_outcome": "binding_failed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "replace",
+     "sg1"
+    ],
+    [
+     "retry",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.14888,
+   "stack_vb_cost_usd": 0.04333
+  },
+  {
+   "episode": "long0_task_s45",
+   "task": "long0_task",
+   "suite": "libero_10_task",
+   "seed": 45,
+   "state_idx": 44,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1996,
+   "wall_s": 377,
+   "orch_outcome": "binding_failed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "replace",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "retry",
+     "sg1"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.14866,
+   "stack_vb_cost_usd": 0.04183
+  },
+  {
+   "episode": "long1_swap_s43",
+   "task": "long1_swap",
+   "suite": "libero_10_swap",
+   "seed": 43,
+   "state_idx": 42,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1703,
+   "wall_s": 401,
+   "orch_outcome": "binding_failed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "replace",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "retry",
+     "sg1"
+    ],
+    [
+     "stop",
+     null
+    ],
+    [
+     "replace",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.17803,
+   "stack_vb_cost_usd": 0.05855
+  },
+  {
+   "episode": "long1_swap_s44",
+   "task": "long1_swap",
+   "suite": "libero_10_swap",
+   "seed": 44,
+   "state_idx": 43,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1965,
+   "wall_s": 423,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13196,
+   "stack_vb_cost_usd": 0.0321
+  },
+  {
+   "episode": "long1_task_s41",
+   "task": "long1_task",
+   "suite": "libero_10_task",
+   "seed": 41,
+   "state_idx": 40,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 3849,
+   "wall_s": 584,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "retry",
+     "sg1"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.1461,
+   "stack_vb_cost_usd": 0.04215
+  },
+  {
+   "episode": "long1_task_s45",
+   "task": "long1_task",
+   "suite": "libero_10_task",
+   "seed": 45,
+   "state_idx": 44,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1775,
+   "wall_s": 424,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13111,
+   "stack_vb_cost_usd": 0.04151
+  },
+  {
+   "episode": "long2_task_s41",
+   "task": "long2_task",
+   "suite": "libero_10_task",
+   "seed": 41,
+   "state_idx": 40,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 2146,
+   "wall_s": 278,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13461,
+   "stack_vb_cost_usd": 0.01194
+  },
+  {
+   "episode": "long2_task_s42",
+   "task": "long2_task",
+   "suite": "libero_10_task",
+   "seed": 42,
+   "state_idx": 41,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 2181,
+   "wall_s": 237,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13459,
+   "stack_vb_cost_usd": 0.01192
+  },
+  {
+   "episode": "long2_task_s43",
+   "task": "long2_task",
+   "suite": "libero_10_task",
+   "seed": 43,
+   "state_idx": 42,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 3126,
+   "wall_s": 346,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "retry",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.14711,
+   "stack_vb_cost_usd": 0.01844
+  },
+  {
+   "episode": "long2_task_s44",
+   "task": "long2_task",
+   "suite": "libero_10_task",
+   "seed": 44,
+   "state_idx": 43,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 2204,
+   "wall_s": 248,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13443,
+   "stack_vb_cost_usd": 0.01167
+  },
+  {
+   "episode": "long2_task_s45",
+   "task": "long2_task",
+   "suite": "libero_10_task",
+   "seed": 45,
+   "state_idx": 44,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 2223,
+   "wall_s": 227,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13471,
+   "stack_vb_cost_usd": 0.01211
+  },
+  {
+   "episode": "long4_swap_s41",
+   "task": "long4_swap",
+   "suite": "libero_10_swap",
+   "seed": 41,
+   "state_idx": 40,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1772,
+   "wall_s": 400,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13153,
+   "stack_vb_cost_usd": 0.02444
+  },
+  {
+   "episode": "long4_swap_s42",
+   "task": "long4_swap",
+   "suite": "libero_10_swap",
+   "seed": 42,
+   "state_idx": 41,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1712,
+   "wall_s": 371,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13173,
+   "stack_vb_cost_usd": 0.0244
+  },
+  {
+   "episode": "long4_swap_s43",
+   "task": "long4_swap",
+   "suite": "libero_10_swap",
+   "seed": 43,
+   "state_idx": 42,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1754,
+   "wall_s": 373,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13191,
+   "stack_vb_cost_usd": 0.0246
+  },
+  {
+   "episode": "long4_swap_s44",
+   "task": "long4_swap",
+   "suite": "libero_10_swap",
+   "seed": 44,
+   "state_idx": 43,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1864,
+   "wall_s": 402,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13165,
+   "stack_vb_cost_usd": 0.02476
+  },
+  {
+   "episode": "long4_swap_s45",
+   "task": "long4_swap",
+   "suite": "libero_10_swap",
+   "seed": 45,
+   "state_idx": 44,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1608,
+   "wall_s": 389,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13085,
+   "stack_vb_cost_usd": 0.02468
+  },
+  {
+   "episode": "long4_task_s41",
+   "task": "long4_task",
+   "suite": "libero_10_task",
+   "seed": 41,
+   "state_idx": 40,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1677,
+   "wall_s": 378,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13207,
+   "stack_vb_cost_usd": 0.02439
+  },
+  {
+   "episode": "long4_task_s42",
+   "task": "long4_task",
+   "suite": "libero_10_task",
+   "seed": 42,
+   "state_idx": 41,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1659,
+   "wall_s": 394,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13159,
+   "stack_vb_cost_usd": 0.02452
+  },
+  {
+   "episode": "long4_task_s43",
+   "task": "long4_task",
+   "suite": "libero_10_task",
+   "seed": 43,
+   "state_idx": 42,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1682,
+   "wall_s": 405,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13137,
+   "stack_vb_cost_usd": 0.02435
+  },
+  {
+   "episode": "long4_task_s44",
+   "task": "long4_task",
+   "suite": "libero_10_task",
+   "seed": 44,
+   "state_idx": 43,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1640,
+   "wall_s": 404,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13261,
+   "stack_vb_cost_usd": 0.02448
+  },
+  {
+   "episode": "long4_task_s45",
+   "task": "long4_task",
+   "suite": "libero_10_task",
+   "seed": 45,
+   "state_idx": 44,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1597,
+   "wall_s": 402,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13153,
+   "stack_vb_cost_usd": 0.02475
+  },
+  {
+   "episode": "long6_swap_s41",
+   "task": "long6_swap",
+   "suite": "libero_10_swap",
+   "seed": 41,
+   "state_idx": 40,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1596,
+   "wall_s": 400,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13266,
+   "stack_vb_cost_usd": 0.02445
+  },
+  {
+   "episode": "long7_swap_s41",
+   "task": "long7_swap",
+   "suite": "libero_10_swap",
+   "seed": 41,
+   "state_idx": 40,
+   "phase": "retry1_N20C",
+   "official": 1,
+   "final_sim_step": 1938,
+   "wall_s": 337,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13191,
+   "stack_vb_cost_usd": 0.03338
+  },
+  {
+   "episode": "long7_swap_s43",
+   "task": "long7_swap",
+   "suite": "libero_10_swap",
+   "seed": 43,
+   "state_idx": 42,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 2035,
+   "wall_s": 389,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13247,
+   "stack_vb_cost_usd": 0.03322
+  },
+  {
+   "episode": "long7_swap_s44",
+   "task": "long7_swap",
+   "suite": "libero_10_swap",
+   "seed": 44,
+   "state_idx": 43,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 2764,
+   "wall_s": 438,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "retry",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.1453,
+   "stack_vb_cost_usd": 0.03355
+  },
+  {
+   "episode": "long7_swap_s45",
+   "task": "long7_swap",
+   "suite": "libero_10_swap",
+   "seed": 45,
+   "state_idx": 44,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 2768,
+   "wall_s": 428,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "retry",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.14616,
+   "stack_vb_cost_usd": 0.03331
+  },
+  {
+   "episode": "long7_task_s41",
+   "task": "long7_task",
+   "suite": "libero_10_task",
+   "seed": 41,
+   "state_idx": 40,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1725,
+   "wall_s": 380,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.1329,
+   "stack_vb_cost_usd": 0.02328
+  },
+  {
+   "episode": "long7_task_s42",
+   "task": "long7_task",
+   "suite": "libero_10_task",
+   "seed": 42,
+   "state_idx": 41,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1615,
+   "wall_s": 374,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.1324,
+   "stack_vb_cost_usd": 0.0234
+  },
+  {
+   "episode": "long7_task_s43",
+   "task": "long7_task",
+   "suite": "libero_10_task",
+   "seed": 43,
+   "state_idx": 42,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1602,
+   "wall_s": 373,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13356,
+   "stack_vb_cost_usd": 0.02363
+  },
+  {
+   "episode": "long7_task_s44",
+   "task": "long7_task",
+   "suite": "libero_10_task",
+   "seed": 44,
+   "state_idx": 43,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1641,
+   "wall_s": 301,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13208,
+   "stack_vb_cost_usd": 0.02375
+  },
+  {
+   "episode": "long7_task_s45",
+   "task": "long7_task",
+   "suite": "libero_10_task",
+   "seed": 45,
+   "state_idx": 44,
+   "phase": "subset_N20C",
+   "official": 1,
+   "final_sim_step": 1688,
+   "wall_s": 321,
+   "orch_outcome": "all_controls_completed",
+   "decisions": [
+    [
+     "execute",
+     "sg1"
+    ],
+    [
+     "execute",
+     "sg2"
+    ],
+    [
+     "stop",
+     null
+    ]
+   ],
+   "orch_cost_usd": 0.13246,
+   "stack_vb_cost_usd": 0.02353
+  }
+ ]
+}

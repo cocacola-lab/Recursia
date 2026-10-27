@@ -1,0 +1,12 @@
+{"t": 1793092103.086, "sim_step": 187, "action": "close", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793092104.128, "sim_step": 217, "action": "close", "executed": true, "role": "dependent"}
+{"t": 1793092104.128, "sim_step": 217, "action": "lift", "allow": true, "why": "verified", "status": "verified"}
+{"t": 1793092105.889, "sim_step": 267, "action": "lift", "executed": true, "role": "dependent"}
+{"t": 1793092156.834, "sim_step": 631, "action": "release", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793092157.966, "sim_step": 661, "action": "release", "executed": true, "role": "dependent"}
+{"t": 1793092258.939, "sim_step": 1020, "action": "close", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793092259.996, "sim_step": 1050, "action": "close", "executed": true, "role": "dependent"}
+{"t": 1793092259.996, "sim_step": 1050, "action": "lift", "allow": true, "why": "verified", "status": "verified"}
+{"t": 1793092261.772, "sim_step": 1100, "action": "lift", "executed": true, "role": "dependent"}
+{"t": 1793092320.575, "sim_step": 1496, "action": "release", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793092321.751, "sim_step": 1526, "action": "release", "executed": true, "role": "dependent"}

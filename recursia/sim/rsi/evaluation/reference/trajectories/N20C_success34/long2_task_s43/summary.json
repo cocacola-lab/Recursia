@@ -1,0 +1,233 @@
+{
+ "arm_mode": "closed_loop_llm_orchestration",
+ "method": "inference method only; the learned stack is N20",
+ "cl_version": "n20c_closed_loop_v1_20261016",
+ "stack": {
+  "id": "N20",
+  "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+ },
+ "interface_version": "rsi_n20_iface_v2_20261016",
+ "code_hashes": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "language": "turn on the stove and put the pan on it",
+ "replace_enabled": true,
+ "step_cost": 1109,
+ "fallback_to_baseline": false,
+ "outcome": "all_controls_completed",
+ "llm_calls": [
+  {
+   "tag": "cl_plan_0",
+   "status": "ok",
+   "cost_usd": 0.083628,
+   "usage": {
+    "input_tokens": 19952,
+    "output_tokens": 191,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTFD5dNV5397XhUxV9T",
+   "latency_s": 12.95,
+   "prompt_sha256": "6987671611e099d74911e2b438bc0693e82f85151ff978f3fa26cd6587ae703d",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_0_0",
+   "status": "ok",
+   "cost_usd": 0.011363999999999999,
+   "usage": {
+    "input_tokens": 2481,
+    "output_tokens": 72,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTGaK6rHK1JHQgytB9F",
+   "latency_s": 2.9,
+   "prompt_sha256": "e4fa98aae6827484df3b1eb38b488f50f8e715baa1ecba01a6812ab13d41756a",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_1_0",
+   "status": "ok",
+   "cost_usd": 0.011659999999999998,
+   "usage": {
+    "input_tokens": 2540,
+    "output_tokens": 75,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTNTZj7Wddye1WNDKpF",
+   "latency_s": 9.13,
+   "prompt_sha256": "9b788a3eb3ca88ca3c959278fc330cdda69ed338d89d07a62fa986e5630c2a35",
+   "sim_step": 958
+  },
+  {
+   "tag": "cl_decide_2_0",
+   "status": "ok",
+   "cost_usd": 0.012684,
+   "usage": {
+    "input_tokens": 2601,
+    "output_tokens": 114,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTUZpfwUYsjxU86TVtH",
+   "latency_s": 7.95,
+   "prompt_sha256": "588e9acb545715d460dd15c2c358fc434bcb20b548cb24462257a2ad1c3d9a45",
+   "sim_step": 1861
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007672,
+   "usage": {
+    "input_tokens": 1618,
+    "output_tokens": 60,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTdDQMBuERyUUyFBhAh",
+   "latency_s": 7.08,
+   "prompt_sha256": "4d9f57082f4a5c4919031d8e2b3baa1e93ef6477371b4b9ffa84ffc2b6794552",
+   "sim_step": 3126
+  },
+  {
+   "tag": "cl_decide_3_0",
+   "status": "ok",
+   "cost_usd": 0.012432,
+   "usage": {
+    "input_tokens": 2513,
+    "output_tokens": 119,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTdUaf8BTNXPKGtxruv",
+   "latency_s": 3.3,
+   "prompt_sha256": "fd9090bcd328691c73e894087182aeb38469b264846012604091a2c467a17689",
+   "sim_step": 3126
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007672,
+   "usage": {
+    "input_tokens": 1618,
+    "output_tokens": 60,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTdirQNKBJvKQfrUmxt",
+   "latency_s": 3.43,
+   "prompt_sha256": "4d9f57082f4a5c4919031d8e2b3baa1e93ef6477371b4b9ffa84ffc2b6794552",
+   "sim_step": 3126
+  }
+ ],
+ "decisions": [
+  {
+   "action": "execute",
+   "subgoal": "sg1",
+   "reason": "Nothing has been done yet and the scene is unchanged, so start the plan by turning on the stove knob; the budget easily covers both subgoals.",
+   "n": 0,
+   "sim_step": 10
+  },
+  {
+   "action": "execute",
+   "subgoal": "sg2",
+   "reason": "Image 2 shows the stove burner glowing red, so sg1 succeeded; the pan is still beside the stove and the remaining budget covers sg2.",
+   "n": 1,
+   "sim_step": 958
+  },
+  {
+   "action": "retry",
+   "subgoal": "sg2",
+   "reason": "The stove is now on (red coil visible) but the pan is still beside it, so sg2 is not done; a retry is offered, nothing is held, and 2139 remaining steps cover the ~1109-step attempt, though the IK-box failure may repeat if the target is unchanged.",
+   "n": 2,
+   "sim_step": 1861
+  },
+  {
+   "action": "stop",
+   "subgoal": null,
+   "reason": "Both subgoals are control-completed, image 2 shows the pan resting on the stove with sg2's check 'yes', stop is the only allowed action, and the remaining budget (874) is below one subgoal's cost; note sg1's knob state was never visually checked and cannot be confirmed from the image.",
+   "n": 3,
+   "sim_step": 3126
+  }
+ ],
+ "checks": [
+  {
+   "subgoal": "sg2",
+   "clause": "the pan is resting on top of the stove",
+   "verdict": "yes",
+   "evidence": "In image 2 the pan has moved from the left side of the table and now sits on the stove's burner plate, with its handle extending to the right.",
+   "sim_step": 3126
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the pan is resting on top of the stove",
+   "verdict": "yes",
+   "evidence": "In image 2 the pan has moved from the left side of the table and now sits on the stove's burner plate, with its handle extending to the right.",
+   "sim_step": 3126
+  }
+ ],
+ "prompt_sha256": {
+  "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+  "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+  "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+ },
+ "plan_attempts": [
+  {
+   "plan_notes": "The instruction has two parts, done in the order given. First, turn on the stove by rotating its knob with actuate_on, using 'stove knob' as the reference. Then place the pan on the stove with the 'on' relation and no side word.",
+   "subgoals": [
+    {
+     "relation": "actuate_on",
+     "object": null,
+     "reference": "stove knob",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    },
+    {
+     "relation": "on",
+     "object": "pan",
+     "reference": "stove",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    }
+   ]
+  }
+ ],
+ "n_stack_calls": 7,
+ "plan": [
+  "sg1",
+  "sg2"
+ ],
+ "retries": {
+  "sg2": 1
+ },
+ "replaced": {},
+ "stack_exception": null,
+ "results": {
+  "sg1": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "stack_verifier_claim_positive",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  },
+  "sg2": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": true,
+   "replace": null
+  }
+ },
+ "final_sim_step": 3126,
+ "cost_usd": 0.14711
+}

@@ -1,0 +1,284 @@
+{
+  "VOCAB": {
+    "cream cheese box": [
+      "cream cheese box",
+      "cream cheese",
+      "white box"
+    ],
+    "cream cheese": [
+      "cream cheese",
+      "cream cheese box",
+      "white box"
+    ],
+    "white mug": [
+      "white cup",
+      "white mug",
+      "gray mug"
+    ],
+    "yellow and white mug": [
+      "yellow and white mug",
+      "yellow mug",
+      "striped mug"
+    ],
+    "red mug": [
+      "red mug",
+      "red coffee mug"
+    ],
+    "moka pot": [
+      "moka pot",
+      "coffee pot",
+      "silver pot"
+    ],
+    "right moka pot": [
+      "moka pot",
+      "coffee pot"
+    ],
+    "chocolate pudding": [
+      "brown box",
+      "chocolate pudding",
+      "pudding"
+    ],
+    "book": [
+      "book",
+      "black book"
+    ],
+    "alphabet soup": [
+      "alphabet soup",
+      "soup can",
+      "can"
+    ],
+    "black bowl": [
+      "black bowl",
+      "bowl"
+    ],
+    "middle black bowl": [
+      "black bowl",
+      "bowl"
+    ],
+    "bowl": [
+      "bowl",
+      "black bowl"
+    ],
+    "left bowl": [
+      "bowl",
+      "black bowl"
+    ],
+    "right bowl": [
+      "bowl",
+      "black bowl"
+    ],
+    "white bowl": [
+      "white bowl",
+      "bowl"
+    ],
+    "butter": [
+      "butter",
+      "butter box",
+      "yellow box"
+    ],
+    "ketchup": [
+      "ketchup",
+      "ketchup bottle",
+      "red bottle"
+    ],
+    "tomato sauce": [
+      "tomato sauce",
+      "tomato sauce can",
+      "can"
+    ],
+    "milk": [
+      "milk",
+      "milk carton",
+      "white carton"
+    ],
+    "orange juice": [
+      "orange juice",
+      "juice carton",
+      "orange carton"
+    ],
+    "salad dressing": [
+      "salad dressing",
+      "dressing bottle",
+      "bottle"
+    ],
+    "frying pan": [
+      "frying pan",
+      "pan",
+      "black pan"
+    ],
+    "wine bottle": [
+      "wine bottle",
+      "bottle"
+    ],
+    "plate": [
+      "plate",
+      "round plate",
+      "white plate"
+    ],
+    "stove": [
+      "stove",
+      "stove top",
+      "burner"
+    ],
+    "cabinet": [
+      "cabinet",
+      "wooden cabinet",
+      "white cabinet"
+    ],
+    "top of the cabinet": [
+      "cabinet top",
+      "cabinet",
+      "wooden cabinet"
+    ],
+    "basket": [
+      "basket",
+      "wicker basket"
+    ],
+    "tray": [
+      "tray",
+      "black tray"
+    ],
+    "caddy": [
+      "caddy",
+      "desk caddy",
+      "wooden caddy"
+    ],
+    "wine rack": [
+      "wine rack",
+      "rack"
+    ],
+    "cabinet shelf": [
+      "cabinet shelf",
+      "shelf",
+      "cabinet"
+    ],
+    "shelf": [
+      "shelf",
+      "cabinet shelf"
+    ],
+    "microwave": [
+      "microwave",
+      "microwave door",
+      "microwave oven"
+    ],
+    "drawer": [
+      "drawer",
+      "drawer handle",
+      "cabinet drawer"
+    ],
+    "stove knob": [
+      "stove knob",
+      "knob",
+      "dial"
+    ]
+  },
+  "SIDE": {
+    "left": "min",
+    "right": "max",
+    "front": "xmin",
+    "back": "xmax",
+    "middle": "mid",
+    "top": "zmax",
+    "bottom": "zmin"
+  },
+  "TEMPLATES": [
+    {
+      "relation": "in",
+      "regex": "put both the (.+?) and the (.+?) in the (basket|tray)$",
+      "two_objects": true
+    },
+    {
+      "relation": "on",
+      "regex": "put both (.+?)s on the (.+)$",
+      "two_instances": true
+    },
+    {
+      "relation": "beside",
+      "regex": "(?:pick up|put) the (.+?) (?:and place it )?to the (left|right|front|back) of the (.+)$"
+    },
+    {
+      "relation": "beside",
+      "regex": "pick up the (.+?) and place it to the (right|left|front|back) compartment of the (.+)$"
+    },
+    {
+      "relation": "in_part",
+      "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?in the (front|back|left|right) compartment of the (.+)$"
+    },
+    {
+      "relation": "in_sliding",
+      "regex": "put the (.+?) (?:at the (front|back) )?in the (top|bottom) drawer of the (cabinet)$"
+    },
+    {
+      "relation": "in_hinged",
+      "regex": "put the (.+?) in the (microwave)$"
+    },
+    {
+      "relation": "in",
+      "regex": "(?:pick up|put) the (.+?) (?:and put it |and place it )?in the (basket|tray)$"
+    },
+    {
+      "relation": "in_layer",
+      "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?(on|under) the (cabinet shelf|shelf)$"
+    },
+    {
+      "relation": "on",
+      "regex": "(?:pick up|put) the (.+?) (?:and place it )?on top of the (.+)$"
+    },
+    {
+      "relation": "on",
+      "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?(?:at the (front|back) |in the (middle) )?on the (left|right)? ?(plate|stove|wine rack|cabinet)$"
+    },
+    {
+      "relation": "on",
+      "regex": "stack the (.+?) on the (.+)$"
+    },
+    {
+      "relation": "open_articulated",
+      "regex": "open the (top|bottom)? ?(drawer)(?: of the cabinet)?$|open the (microwave)$"
+    },
+    {
+      "relation": "close_articulated",
+      "regex": "close the (top|bottom)? ?(drawer)(?: of the cabinet)?$|close the (microwave)$"
+    },
+    {
+      "relation": "actuate_on",
+      "regex": "turn on the (stove)$"
+    },
+    {
+      "relation": "actuate_off",
+      "regex": "turn off the (stove)$"
+    }
+  ],
+  "ANAPHORA": [
+    {
+      "relation": "close_articulated",
+      "regex": "close it$",
+      "refers": "part"
+    },
+    {
+      "relation": "open_articulated",
+      "regex": "open it$",
+      "refers": "part"
+    },
+    {
+      "relation": "in",
+      "regex": "(?:put|place) (?:it|them) in the (basket|tray)$",
+      "refers": "object"
+    },
+    {
+      "relation": "on",
+      "regex": "put the (.+?) on it$",
+      "refers": "support"
+    },
+    {
+      "relation": "on",
+      "regex": "put the (.+?) on top of it$",
+      "refers": "part"
+    },
+    {
+      "relation": "in_sliding",
+      "regex": "put the (.+?) in it$",
+      "refers": "part"
+    }
+  ]
+}

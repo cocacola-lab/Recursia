@@ -1,0 +1,253 @@
+{
+ "arm_mode": "closed_loop_llm_orchestration",
+ "method": "inference method only; the learned stack is N20",
+ "cl_version": "n20c_closed_loop_v1_20261016",
+ "stack": {
+  "id": "N20",
+  "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+ },
+ "interface_version": "rsi_n20_iface_v2_20261016",
+ "code_hashes": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "language": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+ "replace_enabled": true,
+ "step_cost": 1109,
+ "fallback_to_baseline": false,
+ "outcome": "all_controls_completed",
+ "llm_calls": [
+  {
+   "tag": "cl_plan_0",
+   "status": "ok",
+   "cost_usd": 0.065368,
+   "usage": {
+    "input_tokens": 15432,
+    "output_tokens": 182,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSU8J9enozojgH4Dxzm5",
+   "latency_s": 4.47,
+   "prompt_sha256": "11cfdc9f74ecc6989a47a4424b640cbe49e050286c924abfcde6b11ca592e7dc",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_0_0",
+   "status": "ok",
+   "cost_usd": 0.011335999999999999,
+   "usage": {
+    "input_tokens": 2504,
+    "output_tokens": 66,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSUATjRNX9XZdWVWmuEF",
+   "latency_s": 4.78,
+   "prompt_sha256": "d004822ef5aeff0ca28030fee3d3012fecc41a8e6f9a2e74442ac52a0c49d3aa",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.007468,
+   "usage": {
+    "input_tokens": 1632,
+    "output_tokens": 47,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSUMan9az5HEw1oswcYn",
+   "latency_s": 2.42,
+   "prompt_sha256": "cefe914f42016855d770db2f0fa9868e14d5315770a84f0e1bf93d3153b2cb46",
+   "sim_step": 680
+  },
+  {
+   "tag": "cl_decide_1_0",
+   "status": "ok",
+   "cost_usd": 0.012048,
+   "usage": {
+    "input_tokens": 2562,
+    "output_tokens": 90,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSUMnyrdCL8RakL5qSWC",
+   "latency_s": 3.53,
+   "prompt_sha256": "7e7f88f8cfb731b5a4e52cf463cb8984e57eb566365d09036fd36087837b1f48",
+   "sim_step": 680
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007684,
+   "usage": {
+    "input_tokens": 1636,
+    "output_tokens": 57,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSUZRd4SHBnujVmBGZhj",
+   "latency_s": 7.1,
+   "prompt_sha256": "ad4a3a9f6fd359099d609cba9b73dd15ae743ff66c0a4410efbf649e86ed8963",
+   "sim_step": 1608
+  },
+  {
+   "tag": "cl_decide_2_0",
+   "status": "ok",
+   "cost_usd": 0.011896,
+   "usage": {
+    "input_tokens": 2539,
+    "output_tokens": 87,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSUZgXG8BiqqrWVNXjmQ",
+   "latency_s": 3.39,
+   "prompt_sha256": "4e2778039bc5f076b01870e8933291ad0db65783a774ff94b569f5a2f42a0ea3",
+   "sim_step": 1608
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.007448,
+   "usage": {
+    "input_tokens": 1632,
+    "output_tokens": 46,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSUZvZ7T7K86wYynzge8",
+   "latency_s": 2.81,
+   "prompt_sha256": "cefe914f42016855d770db2f0fa9868e14d5315770a84f0e1bf93d3153b2cb46",
+   "sim_step": 1608
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007604,
+   "usage": {
+    "input_tokens": 1636,
+    "output_tokens": 53,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSUa9PHYMLbUzqZYQw65",
+   "latency_s": 2.8,
+   "prompt_sha256": "ad4a3a9f6fd359099d609cba9b73dd15ae743ff66c0a4410efbf649e86ed8963",
+   "sim_step": 1608
+  }
+ ],
+ "decisions": [
+  {
+   "action": "execute",
+   "subgoal": "sg1",
+   "reason": "Nothing has been done yet and both mugs are still off the plates, so start the plan in order by placing the white mug on the left plate.",
+   "n": 0,
+   "sim_step": 10
+  },
+  {
+   "action": "execute",
+   "subgoal": "sg2",
+   "reason": "sg1 is done (check yes, and image 2 shows the white mug on the left plate); sg2 is still pending and 3320 steps easily cover its roughly 1109-step cost, so execute it next.",
+   "n": 1,
+   "sim_step": 680
+  },
+  {
+   "action": "stop",
+   "subgoal": null,
+   "reason": "Both subgoals are control_completed with checks of yes, and image 2 confirms it: the white mug sits on the left plate and the yellow-and-white mug sits on the right plate, so the task is done.",
+   "n": 2,
+   "sim_step": 1608
+  }
+ ],
+ "checks": [
+  {
+   "subgoal": "sg1",
+   "clause": "the white mug is resting on top of the left plate",
+   "verdict": "yes",
+   "evidence": "In image 2 the white textured mug sits centered on the left plate, which is visible around its base.",
+   "sim_step": 680
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the yellow and white mug is resting on top of the right plate",
+   "verdict": "yes",
+   "evidence": "In image 2 the yellow-and-white mug sits centered on the right plate, with the plate's rim visible all around its base.",
+   "sim_step": 1608
+  },
+  {
+   "subgoal": "sg1",
+   "clause": "the white mug is resting on top of the left plate",
+   "verdict": "yes",
+   "evidence": "In image 2 the white textured mug sits centered on the left plate, which shows around its base.",
+   "sim_step": 1608
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the yellow and white mug is resting on top of the right plate",
+   "verdict": "yes",
+   "evidence": "In image 2 the yellow and white mug sits centered on the right plate, with the plate rim visible around its base.",
+   "sim_step": 1608
+  }
+ ],
+ "prompt_sha256": {
+  "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+  "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+  "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+ },
+ "plan_attempts": [
+  {
+   "plan_notes": "Two placements in instruction order: the white mug onto the left plate, then the yellow and white mug onto the right plate. Both plates are clear and visible, so no preparatory action is needed. The side word selects the plate instance.",
+   "subgoals": [
+    {
+     "relation": "on",
+     "object": "white mug",
+     "reference": "plate",
+     "part": null,
+     "side": "left",
+     "object_side": null,
+     "instance": null
+    },
+    {
+     "relation": "on",
+     "object": "yellow and white mug",
+     "reference": "plate",
+     "part": null,
+     "side": "right",
+     "object_side": null,
+     "instance": null
+    }
+   ]
+  }
+ ],
+ "n_stack_calls": 6,
+ "plan": [
+  "sg1",
+  "sg2"
+ ],
+ "retries": {},
+ "replaced": {},
+ "stack_exception": null,
+ "results": {
+  "sg1": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  },
+  "sg2": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  }
+ },
+ "final_sim_step": 1608,
+ "cost_usd": 0.13085
+}

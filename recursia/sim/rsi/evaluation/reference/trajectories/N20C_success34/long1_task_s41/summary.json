@@ -1,0 +1,277 @@
+{
+ "arm_mode": "closed_loop_llm_orchestration",
+ "method": "inference method only; the learned stack is N20",
+ "cl_version": "n20c_closed_loop_v1_20261016",
+ "stack": {
+  "id": "N20",
+  "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+ },
+ "interface_version": "rsi_n20_iface_v2_20261016",
+ "code_hashes": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "language": "put both the alphabet soup and the butter in the basket",
+ "replace_enabled": true,
+ "step_cost": 1109,
+ "fallback_to_baseline": false,
+ "outcome": "all_controls_completed",
+ "llm_calls": [
+  {
+   "tag": "cl_plan_0",
+   "status": "ok",
+   "cost_usd": 0.065188,
+   "usage": {
+    "input_tokens": 15422,
+    "output_tokens": 175,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSBBSCFFBvM8g5pA2pz",
+   "latency_s": 21.52,
+   "prompt_sha256": "c82b42014d9f416981f7d71f9ef8e3d000e63f6d534ae0751f92af2ef777757a",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_0_0",
+   "status": "ok",
+   "cost_usd": 0.011424,
+   "usage": {
+    "input_tokens": 2486,
+    "output_tokens": 74,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSKNtVRgAFsjBx1apK8",
+   "latency_s": 18.1,
+   "prompt_sha256": "0268471a9220ac9ed3b56d3a642c7ad485a2a1c1da4fd10659c2aaea097543bb",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_1_0",
+   "status": "ok",
+   "cost_usd": 0.012332,
+   "usage": {
+    "input_tokens": 2558,
+    "output_tokens": 105,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSVDe9LmnZ362nuZcwQ",
+   "latency_s": 13.41,
+   "prompt_sha256": "5af94869aa006a8acd0401c30800cbffa5b9548570d81c5fb73501f1178c00db",
+   "sim_step": 2035
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.008116,
+   "usage": {
+    "input_tokens": 1619,
+    "output_tokens": 82,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSetjt3qHKB1pYbRAna",
+   "latency_s": 11.9,
+   "prompt_sha256": "939b80489f0181e6dbd42320b6ed1fb28dd343fcf388ff669a9c10b30d228340",
+   "sim_step": 2746
+  },
+  {
+   "tag": "cl_decide_2_0",
+   "status": "ok",
+   "cost_usd": 0.013072,
+   "usage": {
+    "input_tokens": 2558,
+    "output_tokens": 142,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSf71ZpVhLe3zyZwM6R",
+   "latency_s": 3.67,
+   "prompt_sha256": "0c758d7517f1e39b803922d09698e341978442bf7ed43dc61184dc6998cb573e",
+   "sim_step": 2746
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.007852,
+   "usage": {
+    "input_tokens": 1623,
+    "output_tokens": 68,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSqUbd5B54dRhX1pJTQ",
+   "latency_s": 10.27,
+   "prompt_sha256": "9ea5c58b0ad720ff3052b3873062f0d88a1ba5de66e0200b96a3ed175138a62f",
+   "sim_step": 3849
+  },
+  {
+   "tag": "cl_decide_3_0",
+   "status": "ok",
+   "cost_usd": 0.012444,
+   "usage": {
+    "input_tokens": 2521,
+    "output_tokens": 118,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSqhncc7jpDBsrt3JC6",
+   "latency_s": 3.72,
+   "prompt_sha256": "877719147ca2241652352858b5bb6ddefce94e9191c3df0e733ab1a67a248322",
+   "sim_step": 3849
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.0077919999999999994,
+   "usage": {
+    "input_tokens": 1623,
+    "output_tokens": 65,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSqzaQhrS7FaWHQqi57",
+   "latency_s": 3.01,
+   "prompt_sha256": "9ea5c58b0ad720ff3052b3873062f0d88a1ba5de66e0200b96a3ed175138a62f",
+   "sim_step": 3849
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007876000000000001,
+   "usage": {
+    "input_tokens": 1619,
+    "output_tokens": 70,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSrD6EqQs5EKr4UnaN5",
+   "latency_s": 2.76,
+   "prompt_sha256": "939b80489f0181e6dbd42320b6ed1fb28dd343fcf388ff669a9c10b30d228340",
+   "sim_step": 3849
+  }
+ ],
+ "decisions": [
+  {
+   "action": "execute",
+   "subgoal": "sg1",
+   "reason": "Nothing has run yet and the alphabet soup is still on the table, so start with the first pending subgoal in plan order; the budget covers both subgoals.",
+   "n": 0,
+   "sim_step": 10
+  },
+  {
+   "action": "execute",
+   "subgoal": "sg2",
+   "reason": "sg1 failed (the alphabet soup was lost after lift and sits back on the table near its start) and no retry is offered, but the pending butter subgoal fits the remaining 1965-step budget, so executing sg2 still completes part of the instruction.",
+   "n": 1,
+   "sim_step": 2035
+  },
+  {
+   "action": "retry",
+   "subgoal": "sg1",
+   "reason": "The alphabet soup is still on the table outside the basket after sg1 failed, and with 1254 steps remaining the budget covers one more attempt of about 1109 steps, so retrying sg1 is worthwhile; image 2 shows the butter is gone from its original spot, but it isn't clearly visible in the basket, so sg2 remains unconfirmed.",
+   "n": 2,
+   "sim_step": 2746
+  },
+  {
+   "action": "stop",
+   "subgoal": null,
+   "reason": "Stop is the only allowed action, and with 151 steps left no further attempt fits the budget; both subgoals finished control, but only the alphabet soup is confirmed in the basket, while the butter's check is unsure and image 2 appears to show it gone from the table without clearly showing it in the basket.",
+   "n": 3,
+   "sim_step": 3849
+  }
+ ],
+ "checks": [
+  {
+   "subgoal": "sg2",
+   "clause": "the butter is inside the basket",
+   "verdict": "unsure",
+   "evidence": "In image 1 the small butter box sat in front of the tomato can; in image 2 it is gone from the table, but the basket's opaque walls hide its contents, so the butter cannot be seen inside.",
+   "sim_step": 2746
+  },
+  {
+   "subgoal": "sg1",
+   "clause": "the alphabet soup is inside the basket",
+   "verdict": "yes",
+   "evidence": "The blue-labeled alphabet soup can, which stood beside the ketchup in image 1, is gone from there and is now visible lying within the basket's walls.",
+   "sim_step": 3849
+  },
+  {
+   "subgoal": "sg1",
+   "clause": "the alphabet soup is inside the basket",
+   "verdict": "yes",
+   "evidence": "The blue-labeled alphabet soup can, once beside the ketchup in image 1, now sits tilted inside the basket's walls in image 2.",
+   "sim_step": 3849
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the butter is inside the basket",
+   "verdict": "unsure",
+   "evidence": "The butter is gone from its original spot by the milk carton, and only the alphabet soup can is visible in the basket, so the butter may be hidden inside or missing.",
+   "sim_step": 3849
+  }
+ ],
+ "prompt_sha256": {
+  "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+  "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+  "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+ },
+ "plan_attempts": [
+  {
+   "plan_notes": "Two placements into the basket, in instruction order: alphabet soup first, then butter. The 'in' relation takes no side word, and the basket is open on top in the initial view, so no preparatory action is needed.",
+   "subgoals": [
+    {
+     "relation": "in",
+     "object": "alphabet soup",
+     "reference": "basket",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    },
+    {
+     "relation": "in",
+     "object": "butter",
+     "reference": "basket",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    }
+   ]
+  }
+ ],
+ "n_stack_calls": 7,
+ "plan": [
+  "sg1",
+  "sg2"
+ ],
+ "retries": {
+  "sg1": 1
+ },
+ "replaced": {},
+ "stack_exception": null,
+ "results": {
+  "sg1": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": true,
+   "replace": null
+  },
+  "sg2": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  }
+ },
+ "final_sim_step": 3849,
+ "cost_usd": 0.1461
+}

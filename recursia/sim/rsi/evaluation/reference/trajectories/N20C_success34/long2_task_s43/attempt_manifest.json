@@ -1,0 +1,549 @@
+{
+ "attempt_id": "N20C:long2_task:s43:d7c8837a",
+ "arm": "N20C",
+ "phase": "subset_N20C",
+ "suite": "libero_10_task",
+ "task": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+ "task_short": "long2_task",
+ "seed": 43,
+ "state_idx": 42,
+ "n_init_states": 50,
+ "policy_sha256": "dbe25f1450857b0b2c583e07d42620b98fb07da6c56d189bb66376b950511ec1",
+ "policy_path": "programs/N20C.py",
+ "task_language": "turn on the stove and put the pan on it",
+ "task_descriptors": {
+  "objects": {
+   "pan": [
+    "pan"
+   ]
+  },
+  "supports": {
+   "stove": [
+    "stove",
+    "stove top",
+    "burner"
+   ]
+  },
+  "articulated": {
+   "stove knob": [
+    "stove knob",
+    "knob",
+    "dial"
+   ]
+  },
+  "side_words": {
+   "left": "min",
+   "right": "max",
+   "front": "xmin",
+   "back": "xmax",
+   "middle": "mid",
+   "top": "zmax",
+   "bottom": "zmin"
+  },
+  "language_templates": [
+   {
+    "relation": "in",
+    "regex": "put both the (.+?) and the (.+?) in the (basket|tray)$",
+    "two_objects": true
+   },
+   {
+    "relation": "on",
+    "regex": "put both (.+?)s on the (.+)$",
+    "two_instances": true
+   },
+   {
+    "relation": "beside",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it )?to the (left|right|front|back) of the (.+)$"
+   },
+   {
+    "relation": "beside",
+    "regex": "pick up the (.+?) and place it to the (right|left|front|back) compartment of the (.+)$"
+   },
+   {
+    "relation": "in_part",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?in the (front|back|left|right) compartment of the (.+)$"
+   },
+   {
+    "relation": "in_sliding",
+    "regex": "put the (.+?) (?:at the (front|back) )?in the (top|bottom) drawer of the (cabinet)$"
+   },
+   {
+    "relation": "in_hinged",
+    "regex": "put the (.+?) in the (microwave)$"
+   },
+   {
+    "relation": "in",
+    "regex": "(?:pick up|put) the (.+?) (?:and put it |and place it )?in the (basket|tray)$"
+   },
+   {
+    "relation": "in_layer",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?(on|under) the (cabinet shelf|shelf)$"
+   },
+   {
+    "relation": "on",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it )?on top of the (.+)$"
+   },
+   {
+    "relation": "on",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?(?:at the (front|back) |in the (middle) )?on the (left|right)? ?(plate|stove|wine rack|cabinet)$"
+   },
+   {
+    "relation": "on",
+    "regex": "stack the (.+?) on the (.+)$"
+   },
+   {
+    "relation": "open_articulated",
+    "regex": "open the (top|bottom)? ?(drawer)(?: of the cabinet)?$|open the (microwave)$"
+   },
+   {
+    "relation": "close_articulated",
+    "regex": "close the (top|bottom)? ?(drawer)(?: of the cabinet)?$|close the (microwave)$"
+   },
+   {
+    "relation": "actuate_on",
+    "regex": "turn on the (stove)$"
+   },
+   {
+    "relation": "actuate_off",
+    "regex": "turn off the (stove)$"
+   }
+  ],
+  "anaphora_templates": [
+   {
+    "relation": "close_articulated",
+    "regex": "close it$",
+    "refers": "part"
+   },
+   {
+    "relation": "open_articulated",
+    "regex": "open it$",
+    "refers": "part"
+   },
+   {
+    "relation": "in",
+    "regex": "(?:put|place) (?:it|them) in the (basket|tray)$",
+    "refers": "object"
+   },
+   {
+    "relation": "on",
+    "regex": "put the (.+?) on it$",
+    "refers": "support"
+   },
+   {
+    "relation": "on",
+    "regex": "put the (.+?) on top of it$",
+    "refers": "part"
+   },
+   {
+    "relation": "in_sliding",
+    "regex": "put the (.+?) in it$",
+    "refers": "part"
+   }
+  ],
+  "support_prompts": [
+   "stove",
+   "stove top",
+   "burner"
+  ]
+ },
+ "official_task_completed": 1,
+ "sandbox_rc": 0,
+ "reward": 1.0,
+ "terminated": true,
+ "truncated": false,
+ "policy_duration_s": 317.5,
+ "env_setup_s": 13.3,
+ "final_sim_step": 3126,
+ "final_official_predicates": [
+  {
+   "predicate": [
+    "turnon",
+    "flat_stove_1"
+   ],
+   "value": true
+  },
+  {
+   "predicate": [
+    "on",
+    "chefmate_8_frypan_1",
+    "flat_stove_1_cook_region"
+   ],
+   "value": true
+  }
+ ],
+ "final_official_full_success": true,
+ "stderr_tail": "<frozen_policy>:534: RuntimeWarning: All-NaN slice encountered\n",
+ "gpu": "3",
+ "timestamp": "2026-10-27T16:54:03",
+ "model_calls": 2,
+ "vlm_stats": {
+  "calls": 2,
+  "ok": 2,
+  "abstain_or_error": 0,
+  "cost_usd": 0.018444,
+  "latency_s": 14.66
+ },
+ "motion_interface_stats": {
+  "ik_calls": 17,
+  "ik_failed": 0,
+  "ik_fallback": 6,
+  "moves": 41,
+  "sim_steps": 1383,
+  "reached": 25,
+  "not_reached": 16,
+  "status_counts": {
+   "uncertain": 14,
+   "reached": 25,
+   "stalled": 1,
+   "unreachable": 1
+  },
+  "jit_s": 4.557147741317749
+ },
+ "contact_primitive_stats": {
+  "calls": 6,
+  "sim_steps": 708,
+  "status_counts": {
+   "reached": 5,
+   "stalled": 1
+  },
+  "success": 5,
+  "non_success": 1
+ },
+ "gate_stats": {
+  "decisions": 8,
+  "refusals": 1,
+  "violations": 0,
+  "allowed_by_action": {
+   "close": 3,
+   "lift": 2,
+   "transport": 1,
+   "release": 1
+  }
+ },
+ "placement_gate_stats": {
+  "allow_success": 0,
+  "release_on_uncertain": 0,
+  "refused_failed": 0,
+  "refused_uncertain": 0,
+  "refused_descent": 0,
+  "refused_no_verdict": 0,
+  "refused_no_touchdown": 0,
+  "violations": 0,
+  "decisions": 0
+ },
+ "home_motion_stats": {
+  "calls": 6,
+  "reached": 6,
+  "not_reached": 0,
+  "refused": 0,
+  "sim_steps": 725,
+  "status_counts": {
+   "reached": 6
+  },
+  "production_calls": 11
+ },
+ "adapter_revision": "runtime_language_v3_20260928",
+ "descriptor_sha256": "b74f1a94d1c557f1505cc1ba34d46f67efbd00c321812362d68dd72db5916b6e",
+ "adapter_files_sha256": {
+  "adapter_v3.py": "1f4979b2c7fe56b433cb0043fea30004bb2a1b5b856b8d7c5e6bdd2690c9ed1d",
+  "adapter_lexicon_v3.json": "40432399e6816f76b534402d0283477cdf200b7c4555bca401364745964a5600"
+ },
+ "harness_revision": "n8_clean_horizon_v1",
+ "failure_class": null,
+ "horizon_exhausted": false,
+ "orch_summary": {
+  "arm_mode": "closed_loop_llm_orchestration",
+  "method": "inference method only; the learned stack is N20",
+  "cl_version": "n20c_closed_loop_v1_20261016",
+  "stack": {
+   "id": "N20",
+   "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+  },
+  "interface_version": "rsi_n20_iface_v2_20261016",
+  "code_hashes": {
+   "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+   "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+   "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+  },
+  "language": "turn on the stove and put the pan on it",
+  "replace_enabled": true,
+  "step_cost": 1109,
+  "fallback_to_baseline": false,
+  "outcome": "all_controls_completed",
+  "llm_calls": [
+   {
+    "tag": "cl_plan_0",
+    "status": "ok",
+    "cost_usd": 0.083628,
+    "usage": {
+     "input_tokens": 19952,
+     "output_tokens": 191,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTFD5dNV5397XhUxV9T",
+    "latency_s": 12.95,
+    "prompt_sha256": "6987671611e099d74911e2b438bc0693e82f85151ff978f3fa26cd6587ae703d",
+    "sim_step": 10
+   },
+   {
+    "tag": "cl_decide_0_0",
+    "status": "ok",
+    "cost_usd": 0.011363999999999999,
+    "usage": {
+     "input_tokens": 2481,
+     "output_tokens": 72,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTGaK6rHK1JHQgytB9F",
+    "latency_s": 2.9,
+    "prompt_sha256": "e4fa98aae6827484df3b1eb38b488f50f8e715baa1ecba01a6812ab13d41756a",
+    "sim_step": 10
+   },
+   {
+    "tag": "cl_decide_1_0",
+    "status": "ok",
+    "cost_usd": 0.011659999999999998,
+    "usage": {
+     "input_tokens": 2540,
+     "output_tokens": 75,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTNTZj7Wddye1WNDKpF",
+    "latency_s": 9.13,
+    "prompt_sha256": "9b788a3eb3ca88ca3c959278fc330cdda69ed338d89d07a62fa986e5630c2a35",
+    "sim_step": 958
+   },
+   {
+    "tag": "cl_decide_2_0",
+    "status": "ok",
+    "cost_usd": 0.012684,
+    "usage": {
+     "input_tokens": 2601,
+     "output_tokens": 114,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTUZpfwUYsjxU86TVtH",
+    "latency_s": 7.95,
+    "prompt_sha256": "588e9acb545715d460dd15c2c358fc434bcb20b548cb24462257a2ad1c3d9a45",
+    "sim_step": 1861
+   },
+   {
+    "tag": "cl_verify_sg2",
+    "status": "ok",
+    "cost_usd": 0.007672,
+    "usage": {
+     "input_tokens": 1618,
+     "output_tokens": 60,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTdDQMBuERyUUyFBhAh",
+    "latency_s": 7.08,
+    "prompt_sha256": "4d9f57082f4a5c4919031d8e2b3baa1e93ef6477371b4b9ffa84ffc2b6794552",
+    "sim_step": 3126
+   },
+   {
+    "tag": "cl_decide_3_0",
+    "status": "ok",
+    "cost_usd": 0.012432,
+    "usage": {
+     "input_tokens": 2513,
+     "output_tokens": 119,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTdUaf8BTNXPKGtxruv",
+    "latency_s": 3.3,
+    "prompt_sha256": "fd9090bcd328691c73e894087182aeb38469b264846012604091a2c467a17689",
+    "sim_step": 3126
+   },
+   {
+    "tag": "cl_verify_sg2",
+    "status": "ok",
+    "cost_usd": 0.007672,
+    "usage": {
+     "input_tokens": 1618,
+     "output_tokens": 60,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSTdirQNKBJvKQfrUmxt",
+    "latency_s": 3.43,
+    "prompt_sha256": "4d9f57082f4a5c4919031d8e2b3baa1e93ef6477371b4b9ffa84ffc2b6794552",
+    "sim_step": 3126
+   }
+  ],
+  "decisions": [
+   {
+    "action": "execute",
+    "subgoal": "sg1",
+    "reason": "Nothing has been done yet and the scene is unchanged, so start the plan by turning on the stove knob; the budget easily covers both subgoals.",
+    "n": 0,
+    "sim_step": 10
+   },
+   {
+    "action": "execute",
+    "subgoal": "sg2",
+    "reason": "Image 2 shows the stove burner glowing red, so sg1 succeeded; the pan is still beside the stove and the remaining budget covers sg2.",
+    "n": 1,
+    "sim_step": 958
+   },
+   {
+    "action": "retry",
+    "subgoal": "sg2",
+    "reason": "The stove is now on (red coil visible) but the pan is still beside it, so sg2 is not done; a retry is offered, nothing is held, and 2139 remaining steps cover the ~1109-step attempt, though the IK-box failure may repeat if the target is unchanged.",
+    "n": 2,
+    "sim_step": 1861
+   },
+   {
+    "action": "stop",
+    "subgoal": null,
+    "reason": "Both subgoals are control-completed, image 2 shows the pan resting on the stove with sg2's check 'yes', stop is the only allowed action, and the remaining budget (874) is below one subgoal's cost; note sg1's knob state was never visually checked and cannot be confirmed from the image.",
+    "n": 3,
+    "sim_step": 3126
+   }
+  ],
+  "checks": [
+   {
+    "subgoal": "sg2",
+    "clause": "the pan is resting on top of the stove",
+    "verdict": "yes",
+    "evidence": "In image 2 the pan has moved from the left side of the table and now sits on the stove's burner plate, with its handle extending to the right.",
+    "sim_step": 3126
+   },
+   {
+    "subgoal": "sg2",
+    "clause": "the pan is resting on top of the stove",
+    "verdict": "yes",
+    "evidence": "In image 2 the pan has moved from the left side of the table and now sits on the stove's burner plate, with its handle extending to the right.",
+    "sim_step": 3126
+   }
+  ],
+  "prompt_sha256": {
+   "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+   "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+   "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+  },
+  "plan_attempts": [
+   {
+    "plan_notes": "The instruction has two parts, done in the order given. First, turn on the stove by rotating its knob with actuate_on, using 'stove knob' as the reference. Then place the pan on the stove with the 'on' relation and no side word.",
+    "subgoals": [
+     {
+      "relation": "actuate_on",
+      "object": null,
+      "reference": "stove knob",
+      "part": null,
+      "side": null,
+      "object_side": null,
+      "instance": null
+     },
+     {
+      "relation": "on",
+      "object": "pan",
+      "reference": "stove",
+      "part": null,
+      "side": null,
+      "object_side": null,
+      "instance": null
+     }
+    ]
+   }
+  ],
+  "n_stack_calls": 7,
+  "plan": [
+   "sg1",
+   "sg2"
+  ],
+  "retries": {
+   "sg2": 1
+  },
+  "replaced": {},
+  "stack_exception": null,
+  "results": {
+   "sg1": {
+    "status": "control_completed",
+    "failure_reason": null,
+    "verification_status": "stack_verifier_claim_positive",
+    "object_possibly_retained": false,
+    "retry": false,
+    "replace": null
+   },
+   "sg2": {
+    "status": "control_completed",
+    "failure_reason": null,
+    "verification_status": "shadow_recorded_only",
+    "object_possibly_retained": false,
+    "retry": true,
+    "replace": null
+   }
+  },
+  "final_sim_step": 3126,
+  "cost_usd": 0.14711
+ },
+ "orch_llm_stats": {
+  "calls": 7,
+  "ok": 7,
+  "abstain_or_error": 0,
+  "cost_usd": 0.14711200000000002,
+  "latency_s": 46.739999999999995,
+  "usage": [
+   {
+    "input_tokens": 19952,
+    "output_tokens": 191,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2481,
+    "output_tokens": 72,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2540,
+    "output_tokens": 75,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2601,
+    "output_tokens": 114,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1618,
+    "output_tokens": 60,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2513,
+    "output_tokens": 119,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1618,
+    "output_tokens": 60,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  ]
+ },
+ "orch_files_sha256": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "n_events": 808,
+ "n_samples": 3116,
+ "n_obs": 76,
+ "n_marks": 34,
+ "perception_calls": 36,
+ "recorder_errors": []
+}

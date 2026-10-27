@@ -1,0 +1,1 @@
+{"sim_step": 10, "status": "bound", "support": 0.74609375, "rel_margin": 0.8547120418848168, "prompts": ["pan"], "instances": [{"support": 0.7461, "scores": [0.7461], "n_px": 11574}, {"support": 0.1084, "scores": [0.1084], "n_px": 4640}, {"support": 0.0796, "scores": [0.0796], "n_px": 871}, {"support": 0.063, "scores": [0.063], "n_px": 1840}]}
