@@ -1,0 +1,277 @@
+{
+ "arm_mode": "closed_loop_llm_orchestration",
+ "method": "inference method only; the learned stack is N20",
+ "cl_version": "n20c_closed_loop_v1_20261016",
+ "stack": {
+  "id": "N20",
+  "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+ },
+ "interface_version": "rsi_n20_iface_v2_20261016",
+ "code_hashes": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "language": "put both the alphabet soup and the cream cheese box in the basket",
+ "replace_enabled": true,
+ "step_cost": 1109,
+ "fallback_to_baseline": false,
+ "outcome": "all_controls_completed",
+ "llm_calls": [
+  {
+   "tag": "cl_plan_0",
+   "status": "ok",
+   "cost_usd": 0.065696,
+   "usage": {
+    "input_tokens": 15439,
+    "output_tokens": 197,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSVh2ydhwsPeuKZHP7Jn",
+   "latency_s": 8.73,
+   "prompt_sha256": "d609ee4c14ad21b61bd370a80962b7376a9dcb489190465e95895697d5e01135",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_0_0",
+   "status": "ok",
+   "cost_usd": 0.011335999999999999,
+   "usage": {
+    "input_tokens": 2494,
+    "output_tokens": 68,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSVmKbsKmP79mKyWzxoZ",
+   "latency_s": 3.65,
+   "prompt_sha256": "24dc75702f8b8fda032f05d40636e0f20a0136658d4ab7d3ab0f44e4692e3b41",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.007828,
+   "usage": {
+    "input_tokens": 1627,
+    "output_tokens": 66,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSVwWJaZa28eAdUxJVZ8",
+   "latency_s": 3.4,
+   "prompt_sha256": "fc88d1144c241fd1eceed566e31f8a8d3ca04ac24fbfd2251925fea4e49d32fd",
+   "sim_step": 1215
+  },
+  {
+   "tag": "cl_decide_1_0",
+   "status": "ok",
+   "cost_usd": 0.011971999999999998,
+   "usage": {
+    "input_tokens": 2553,
+    "output_tokens": 88,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSVwjmCpa1GuxSP1xTBM",
+   "latency_s": 3.26,
+   "prompt_sha256": "b99896b8d159146977896640c89297660ad5e36b691b657441e7e983bf0d4ed1",
+   "sim_step": 1215
+  },
+  {
+   "tag": "cl_decide_2_0",
+   "status": "ok",
+   "cost_usd": 0.012688,
+   "usage": {
+    "input_tokens": 2627,
+    "output_tokens": 109,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSW2zCG75iGSSd6V1WC6",
+   "latency_s": 6.79,
+   "prompt_sha256": "6585770d1d286a3210f5ead0a157ab4a20fe87f360efa12cf65cb052459681f4",
+   "sim_step": 1998
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007828,
+   "usage": {
+    "input_tokens": 1627,
+    "output_tokens": 66,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWBdiiARh1uE96JB3s1",
+   "latency_s": 7.21,
+   "prompt_sha256": "5410a59cc044ee114a87d7459707079f8ba149008bd3cd05e4ad9c06d8c8892d",
+   "sim_step": 2764
+  },
+  {
+   "tag": "cl_decide_3_0",
+   "status": "ok",
+   "cost_usd": 0.01244,
+   "usage": {
+    "input_tokens": 2530,
+    "output_tokens": 116,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWBrKjmkPTha19Rvjv3",
+   "latency_s": 4.31,
+   "prompt_sha256": "69e23618eeb1004a1819e4a37f86b9f309b7bbe4c437b84900abe69caf1ca6de",
+   "sim_step": 2764
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.007528,
+   "usage": {
+    "input_tokens": 1627,
+    "output_tokens": 51,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWCATPzzzDmEbLvRWyM",
+   "latency_s": 2.4,
+   "prompt_sha256": "fc88d1144c241fd1eceed566e31f8a8d3ca04ac24fbfd2251925fea4e49d32fd",
+   "sim_step": 2764
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007988,
+   "usage": {
+    "input_tokens": 1627,
+    "output_tokens": 74,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWCLGjnP3yHGDFMxBSR",
+   "latency_s": 4.14,
+   "prompt_sha256": "5410a59cc044ee114a87d7459707079f8ba149008bd3cd05e4ad9c06d8c8892d",
+   "sim_step": 2764
+  }
+ ],
+ "decisions": [
+  {
+   "action": "execute",
+   "subgoal": "sg1",
+   "reason": "Both subgoals are still pending and the budget covers them, so start with sg1 in plan order and put the alphabet soup in the basket.",
+   "n": 0,
+   "sim_step": 10
+  },
+  {
+   "action": "execute",
+   "subgoal": "sg2",
+   "reason": "sg1 is done (check yes; image 2 shows the soup can in the basket), and sg2 is pending with enough budget left (2785 > 1109), so the cream cheese box should be placed next.",
+   "n": 1,
+   "sim_step": 1215
+  },
+  {
+   "action": "retry",
+   "subgoal": "sg2",
+   "reason": "The alphabet soup is now in the basket, but the cream cheese box still sits on the table after an infeasible-motion failure. Nothing is held and the 2002 remaining steps cover one more attempt (~1109), so retrying sg2 is worthwhile.",
+   "n": 2,
+   "sim_step": 1998
+  },
+  {
+   "action": "stop",
+   "subgoal": null,
+   "reason": "Stop is the only allowed action; image 2 shows the alphabet soup in the basket, but the cream cheese box is not visible on the table or clearly in the basket, its check is unsure, and the ketchup was knocked over, so the result should be flagged as unconfirmed rather than successful.",
+   "n": 3,
+   "sim_step": 2764
+  }
+ ],
+ "checks": [
+  {
+   "subgoal": "sg1",
+   "clause": "the alphabet soup is inside the basket",
+   "verdict": "yes",
+   "evidence": "The alphabet soup can, which stood left of the ketchup in image 1, is gone from that spot, and a dark can top is now visible inside the basket.",
+   "sim_step": 1215
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the cream cheese box is inside the basket",
+   "verdict": "unsure",
+   "evidence": "The cream cheese box is gone from the table, but only a dark can-like object can be seen inside the basket, so the box is hidden or ambiguous.",
+   "sim_step": 2764
+  },
+  {
+   "subgoal": "sg1",
+   "clause": "the alphabet soup is inside the basket",
+   "verdict": "yes",
+   "evidence": "The alphabet soup can is gone from its table spot, and a dark can top is now visible inside the basket.",
+   "sim_step": 2764
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the cream cheese box is inside the basket",
+   "verdict": "unsure",
+   "evidence": "The cream cheese box no longer sits at its starting spot. The basket shows only a dark object, likely the soup can, and the box itself is not visible to confirm it is inside.",
+   "sim_step": 2764
+  }
+ ],
+ "prompt_sha256": {
+  "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+  "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+  "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+ },
+ "plan_attempts": [
+  {
+   "plan_notes": "Two 'in' subgoals into the basket, in the instruction's order: first the alphabet soup, then the cream cheese box. The basket is open and nothing in the scene needs a preparatory action. The 'in' relation takes no side word, so side is null for both.",
+   "subgoals": [
+    {
+     "relation": "in",
+     "object": "alphabet soup",
+     "reference": "basket",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    },
+    {
+     "relation": "in",
+     "object": "cream cheese box",
+     "reference": "basket",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    }
+   ]
+  }
+ ],
+ "n_stack_calls": 7,
+ "plan": [
+  "sg1",
+  "sg2"
+ ],
+ "retries": {
+  "sg2": 1
+ },
+ "replaced": {},
+ "stack_exception": null,
+ "results": {
+  "sg1": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  },
+  "sg2": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": true,
+   "replace": null
+  }
+ },
+ "final_sim_step": 2764,
+ "cost_usd": 0.1453
+}

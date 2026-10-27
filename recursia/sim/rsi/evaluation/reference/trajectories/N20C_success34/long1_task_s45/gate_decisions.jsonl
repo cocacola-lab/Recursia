@@ -1,0 +1,13 @@
+{"t": 1793090626.763, "sim_step": 243, "action": "close", "allow": false, "why": "refused: status=failed success=False detail=lateral_corridor", "status": "failed"}
+{"t": 1793090643.01, "sim_step": 516, "action": "close", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793090644.189, "sim_step": 546, "action": "close", "executed": true, "role": "dependent"}
+{"t": 1793090644.189, "sim_step": 546, "action": "lift", "allow": true, "why": "verified", "status": "verified"}
+{"t": 1793090646.481, "sim_step": 606, "action": "lift", "executed": true, "role": "dependent"}
+{"t": 1793090709.192, "sim_step": 901, "action": "release", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793090710.3, "sim_step": 931, "action": "release", "executed": true, "role": "dependent"}
+{"t": 1793090773.564, "sim_step": 1264, "action": "close", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793090774.672, "sim_step": 1294, "action": "close", "executed": true, "role": "dependent"}
+{"t": 1793090774.673, "sim_step": 1294, "action": "lift", "allow": true, "why": "verified", "status": "verified"}
+{"t": 1793090777.001, "sim_step": 1354, "action": "lift", "executed": true, "role": "dependent"}
+{"t": 1793090834.048, "sim_step": 1599, "action": "release", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793090835.196, "sim_step": 1629, "action": "release", "executed": true, "role": "dependent"}

@@ -1,0 +1,209 @@
+{
+ "arm_mode": "closed_loop_llm_orchestration",
+ "method": "inference method only; the learned stack is N20",
+ "cl_version": "n20c_closed_loop_v1_20261016",
+ "stack": {
+  "id": "N20",
+  "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+ },
+ "interface_version": "rsi_n20_iface_v2_20261016",
+ "code_hashes": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "language": "turn on the stove and put the pan on it",
+ "replace_enabled": true,
+ "step_cost": 1109,
+ "fallback_to_baseline": false,
+ "outcome": "all_controls_completed",
+ "llm_calls": [
+  {
+   "tag": "cl_plan_0",
+   "status": "ok",
+   "cost_usd": 0.083728,
+   "usage": {
+    "input_tokens": 19952,
+    "output_tokens": 196,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSwRZyXPWjuoUhWrEFF",
+   "latency_s": 31.75,
+   "prompt_sha256": "6987671611e099d74911e2b438bc0693e82f85151ff978f3fa26cd6587ae703d",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_0_0",
+   "status": "ok",
+   "cost_usd": 0.011536,
+   "usage": {
+    "input_tokens": 2479,
+    "output_tokens": 81,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSSxDJogSCzTnd9FgnZe",
+   "latency_s": 5.98,
+   "prompt_sha256": "a8f0d14f5e58cf3ff2b674d05b97315be7b92ab04515d7b89d3a28901efde929",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_1_0",
+   "status": "ok",
+   "cost_usd": 0.012032,
+   "usage": {
+    "input_tokens": 2538,
+    "output_tokens": 94,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgST3ZvBYq32kenQm2df2",
+   "latency_s": 4.59,
+   "prompt_sha256": "00ed2fd3550d326220ef7a512cd7dba60f0ec5f691f7fd24592f7621722a0e49",
+   "sim_step": 959
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007711999999999999,
+   "usage": {
+    "input_tokens": 1618,
+    "output_tokens": 62,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTD48aG426tAUB6G8s7",
+   "latency_s": 8.36,
+   "prompt_sha256": "4d9f57082f4a5c4919031d8e2b3baa1e93ef6477371b4b9ffa84ffc2b6794552",
+   "sim_step": 2146
+  },
+  {
+   "tag": "cl_decide_2_0",
+   "status": "ok",
+   "cost_usd": 0.011988,
+   "usage": {
+    "input_tokens": 2512,
+    "output_tokens": 97,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTDGVi4E8Sjmvqk6A4b",
+   "latency_s": 3.39,
+   "prompt_sha256": "6d0621e38981bafb96498906ba6155e4da579423db38e4a8e5cdb01c392fd44d",
+   "sim_step": 2146
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.007612,
+   "usage": {
+    "input_tokens": 1618,
+    "output_tokens": 57,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSTDXXM4c9PvqfSJWeAi",
+   "latency_s": 2.8,
+   "prompt_sha256": "4d9f57082f4a5c4919031d8e2b3baa1e93ef6477371b4b9ffa84ffc2b6794552",
+   "sim_step": 2146
+  }
+ ],
+ "decisions": [
+  {
+   "action": "execute",
+   "subgoal": "sg1",
+   "reason": "Nothing has been done yet and the scene is unchanged, so the first pending subgoal, turning on the stove, should be executed in plan order; the budget covers both subgoals.",
+   "n": 0,
+   "sim_step": 10
+  },
+  {
+   "action": "execute",
+   "subgoal": "sg2",
+   "reason": "Image 2 shows the stove coils glowing red, so sg1 succeeded, and with 3041 steps remaining (enough for one ~1109-step subgoal) the pending pan placement sg2 should run next.",
+   "n": 1,
+   "sim_step": 959
+  },
+  {
+   "action": "stop",
+   "subgoal": null,
+   "reason": "Both subgoals are control_completed: image 2 shows the pan resting on the stove, which the visual check confirmed. The stove-on subgoal has no check and its state is hard to see under the pan, but stop is the only allowed action.",
+   "n": 2,
+   "sim_step": 2146
+  }
+ ],
+ "checks": [
+  {
+   "subgoal": "sg2",
+   "clause": "the pan is resting on top of the stove",
+   "verdict": "yes",
+   "evidence": "In image 2 the pan has moved from the left of the moka pot and now sits on the stove's burner plate, with its handle extending to the right.",
+   "sim_step": 2146
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the pan is resting on top of the stove",
+   "verdict": "yes",
+   "evidence": "In image 2 the frying pan sits flat on the stove's burner, which it fully covers, with its handle extending to the right.",
+   "sim_step": 2146
+  }
+ ],
+ "prompt_sha256": {
+  "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+  "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+  "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+ },
+ "plan_attempts": [
+  {
+   "plan_notes": "First turn on the stove via rotary actuation of the stove knob (actuate_on, no side), then pick the pan and place it on the stove. The scene shows a single pan and a single stove with its knob, so no side or instance disambiguation is needed. Order follows the instruction.",
+   "subgoals": [
+    {
+     "relation": "actuate_on",
+     "object": null,
+     "reference": "stove",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    },
+    {
+     "relation": "on",
+     "object": "pan",
+     "reference": "stove",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    }
+   ]
+  }
+ ],
+ "n_stack_calls": 6,
+ "plan": [
+  "sg1",
+  "sg2"
+ ],
+ "retries": {},
+ "replaced": {},
+ "stack_exception": null,
+ "results": {
+  "sg1": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "stack_verifier_claim_positive",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  },
+  "sg2": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  }
+ },
+ "final_sim_step": 2146,
+ "cost_usd": 0.13461
+}

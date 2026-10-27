@@ -1,0 +1,1 @@
+afc59057ad17120bacf868968b6f98e394097e752b36b263e0292d89e6a6327b  programs/A0.py  # A0 = clean start: original ASPIRE reduced API only, written 2026-10-27 without episodes or Long-Pro data; interface original

@@ -1,0 +1,1 @@
+39bd30bf9a65862b9eca5843547ba3899861704da2c821f90df8542b255f7695  programs/S1.py  # S1 = hand-built shared stack (manual rounds A-S, zeroshot_linear_budget_20260923); no RSI iteration

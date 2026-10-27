@@ -1,0 +1,580 @@
+{
+ "attempt_id": "N20C:long6_swap:s41:9ade9e28",
+ "arm": "N20C",
+ "phase": "subset_N20C",
+ "suite": "libero_10_swap",
+ "task": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+ "task_short": "long6_swap",
+ "seed": 41,
+ "state_idx": 40,
+ "n_init_states": 50,
+ "policy_sha256": "dbe25f1450857b0b2c583e07d42620b98fb07da6c56d189bb66376b950511ec1",
+ "policy_path": "programs/N20C.py",
+ "task_language": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+ "task_descriptors": {
+  "objects": {
+   "white mug": [
+    "white cup",
+    "white mug",
+    "gray mug"
+   ],
+   "chocolate pudding": [
+    "brown box",
+    "chocolate pudding",
+    "pudding"
+   ]
+  },
+  "supports": {
+   "plate": [
+    "plate",
+    "round plate",
+    "white plate"
+   ]
+  },
+  "articulated": {},
+  "side_words": {
+   "left": "min",
+   "right": "max",
+   "front": "xmin",
+   "back": "xmax",
+   "middle": "mid",
+   "top": "zmax",
+   "bottom": "zmin"
+  },
+  "language_templates": [
+   {
+    "relation": "in",
+    "regex": "put both the (.+?) and the (.+?) in the (basket|tray)$",
+    "two_objects": true
+   },
+   {
+    "relation": "on",
+    "regex": "put both (.+?)s on the (.+)$",
+    "two_instances": true
+   },
+   {
+    "relation": "beside",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it )?to the (left|right|front|back) of the (.+)$"
+   },
+   {
+    "relation": "beside",
+    "regex": "pick up the (.+?) and place it to the (right|left|front|back) compartment of the (.+)$"
+   },
+   {
+    "relation": "in_part",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?in the (front|back|left|right) compartment of the (.+)$"
+   },
+   {
+    "relation": "in_sliding",
+    "regex": "put the (.+?) (?:at the (front|back) )?in the (top|bottom) drawer of the (cabinet)$"
+   },
+   {
+    "relation": "in_hinged",
+    "regex": "put the (.+?) in the (microwave)$"
+   },
+   {
+    "relation": "in",
+    "regex": "(?:pick up|put) the (.+?) (?:and put it |and place it )?in the (basket|tray)$"
+   },
+   {
+    "relation": "in_layer",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?(on|under) the (cabinet shelf|shelf)$"
+   },
+   {
+    "relation": "on",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it )?on top of the (.+)$"
+   },
+   {
+    "relation": "on",
+    "regex": "(?:pick up|put) the (.+?) (?:and place it |and put it )?(?:at the (front|back) |in the (middle) )?on the (left|right)? ?(plate|stove|wine rack|cabinet)$"
+   },
+   {
+    "relation": "on",
+    "regex": "stack the (.+?) on the (.+)$"
+   },
+   {
+    "relation": "open_articulated",
+    "regex": "open the (top|bottom)? ?(drawer)(?: of the cabinet)?$|open the (microwave)$"
+   },
+   {
+    "relation": "close_articulated",
+    "regex": "close the (top|bottom)? ?(drawer)(?: of the cabinet)?$|close the (microwave)$"
+   },
+   {
+    "relation": "actuate_on",
+    "regex": "turn on the (stove)$"
+   },
+   {
+    "relation": "actuate_off",
+    "regex": "turn off the (stove)$"
+   }
+  ],
+  "anaphora_templates": [
+   {
+    "relation": "close_articulated",
+    "regex": "close it$",
+    "refers": "part"
+   },
+   {
+    "relation": "open_articulated",
+    "regex": "open it$",
+    "refers": "part"
+   },
+   {
+    "relation": "in",
+    "regex": "(?:put|place) (?:it|them) in the (basket|tray)$",
+    "refers": "object"
+   },
+   {
+    "relation": "on",
+    "regex": "put the (.+?) on it$",
+    "refers": "support"
+   },
+   {
+    "relation": "on",
+    "regex": "put the (.+?) on top of it$",
+    "refers": "part"
+   },
+   {
+    "relation": "in_sliding",
+    "regex": "put the (.+?) in it$",
+    "refers": "part"
+   }
+  ],
+  "support_prompts": [
+   "plate",
+   "round plate",
+   "white plate"
+  ],
+  "subgoal_regex": "put the (.+?) to the (left|right) of the plate",
+  "side_select": {
+   "left": "min",
+   "right": "max"
+  },
+  "relation": "beside"
+ },
+ "official_task_completed": 1,
+ "sandbox_rc": 0,
+ "reward": 1.0,
+ "terminated": true,
+ "truncated": false,
+ "policy_duration_s": 368.9,
+ "env_setup_s": 16.5,
+ "final_sim_step": 1596,
+ "final_official_predicates": [
+  {
+   "predicate": [
+    "on",
+    "porcelain_mug_1",
+    "plate_1"
+   ],
+   "value": true
+  },
+  {
+   "predicate": [
+    "on",
+    "chocolate_pudding_1",
+    "living_room_table_plate_right_region"
+   ],
+   "value": true
+  }
+ ],
+ "final_official_full_success": true,
+ "stderr_tail": "<frozen_policy>:534: RuntimeWarning: All-NaN slice encountered\n",
+ "gpu": "2",
+ "timestamp": "2026-10-27T17:20:11",
+ "model_calls": 2,
+ "vlm_stats": {
+  "calls": 2,
+  "ok": 2,
+  "abstain_or_error": 0,
+  "cost_usd": 0.024451999999999998,
+  "latency_s": 17.07
+ },
+ "motion_interface_stats": {
+  "ik_calls": 1,
+  "ik_failed": 0,
+  "ik_fallback": 8,
+  "moves": 33,
+  "sim_steps": 758,
+  "reached": 17,
+  "not_reached": 16,
+  "status_counts": {
+   "uncertain": 16,
+   "reached": 17
+  },
+  "jit_s": 4.4178736209869385
+ },
+ "contact_primitive_stats": {
+  "calls": 5,
+  "sim_steps": 481,
+  "status_counts": {
+   "reached": 5
+  },
+  "success": 5,
+  "non_success": 0
+ },
+ "gate_stats": {
+  "decisions": 6,
+  "refusals": 0,
+  "violations": 0,
+  "allowed_by_action": {
+   "close": 2,
+   "lift": 2,
+   "transport": 0,
+   "release": 2
+  }
+ },
+ "placement_gate_stats": {
+  "allow_success": 0,
+  "release_on_uncertain": 0,
+  "refused_failed": 0,
+  "refused_uncertain": 0,
+  "refused_descent": 0,
+  "refused_no_verdict": 0,
+  "refused_no_touchdown": 0,
+  "violations": 0,
+  "decisions": 0
+ },
+ "home_motion_stats": {
+  "calls": 3,
+  "reached": 3,
+  "not_reached": 0,
+  "refused": 0,
+  "sim_steps": 167,
+  "status_counts": {
+   "reached": 3
+  },
+  "production_calls": 3
+ },
+ "adapter_revision": "runtime_language_v3_20260928",
+ "descriptor_sha256": "fac94abcdda5bb319d35bfe94d74bc30615bd1c16d072452907af65065f9310d",
+ "adapter_files_sha256": {
+  "adapter_v3.py": "1f4979b2c7fe56b433cb0043fea30004bb2a1b5b856b8d7c5e6bdd2690c9ed1d",
+  "adapter_lexicon_v3.json": "40432399e6816f76b534402d0283477cdf200b7c4555bca401364745964a5600"
+ },
+ "harness_revision": "n8_clean_horizon_v1",
+ "failure_class": null,
+ "horizon_exhausted": false,
+ "orch_summary": {
+  "arm_mode": "closed_loop_llm_orchestration",
+  "method": "inference method only; the learned stack is N20",
+  "cl_version": "n20c_closed_loop_v1_20261016",
+  "stack": {
+   "id": "N20",
+   "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+  },
+  "interface_version": "rsi_n20_iface_v2_20261016",
+  "code_hashes": {
+   "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+   "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+   "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+  },
+  "language": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+  "replace_enabled": true,
+  "step_cost": 1109,
+  "fallback_to_baseline": false,
+  "outcome": "all_controls_completed",
+  "llm_calls": [
+   {
+    "tag": "cl_plan_0",
+    "status": "ok",
+    "cost_usd": 0.066092,
+    "usage": {
+     "input_tokens": 15433,
+     "output_tokens": 218,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSVAjpRgL2YNpCempaSt",
+    "latency_s": 10.28,
+    "prompt_sha256": "c738ba94332287e95bd9cf1218a1a81316ff8a9128da3bc9b141f242823acb46",
+    "sim_step": 10
+   },
+   {
+    "tag": "cl_decide_0_0",
+    "status": "ok",
+    "cost_usd": 0.011576,
+    "usage": {
+     "input_tokens": 2509,
+     "output_tokens": 77,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSVEDGkoUZSgbrnAukQk",
+    "latency_s": 18.88,
+    "prompt_sha256": "e64ddeb7092e77bf6da8375905a008aa1ef0407a9d800eec8d5d9a3b28eaa26a",
+    "sim_step": 10
+   },
+   {
+    "tag": "cl_verify_sg1",
+    "status": "ok",
+    "cost_usd": 0.007648,
+    "usage": {
+     "input_tokens": 1632,
+     "output_tokens": 56,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSVRhtzjYkyVZC7TJQrd",
+    "latency_s": 11.4,
+    "prompt_sha256": "bda256cb496ae43f391bf987d4f7d8825990b0f0c7dbdf3e37f2a996523759c8",
+    "sim_step": 714
+   },
+   {
+    "tag": "cl_decide_1_0",
+    "status": "ok",
+    "cost_usd": 0.012468,
+    "usage": {
+     "input_tokens": 2567,
+     "output_tokens": 110,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSVRuqbYfMpdsuahWGPH",
+    "latency_s": 3.72,
+    "prompt_sha256": "ec5b3396dc9167cd791863e8eb43e4342a5988df71bf23f8e5cd790099b7687a",
+    "sim_step": 714
+   },
+   {
+    "tag": "cl_verify_sg2",
+    "status": "ok",
+    "cost_usd": 0.007908,
+    "usage": {
+     "input_tokens": 1642,
+     "output_tokens": 67,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSVceUfgiS67NUJRPHa5",
+    "latency_s": 8.08,
+    "prompt_sha256": "c5db3fe9bc63e2dfd5edb863aac9ec23c6281565f3af3461117b4fc6413ac05f",
+    "sim_step": 1596
+   },
+   {
+    "tag": "cl_decide_2_0",
+    "status": "ok",
+    "cost_usd": 0.011876,
+    "usage": {
+     "input_tokens": 2544,
+     "output_tokens": 85,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSVcuof2oERB3M7EyHwB",
+    "latency_s": 3.11,
+    "prompt_sha256": "1d4f1269f274aa92a86c1ed8b02ed466f25cdfaef032295abb90774e5394a6f7",
+    "sim_step": 1596
+   },
+   {
+    "tag": "cl_verify_sg1",
+    "status": "ok",
+    "cost_usd": 0.007528,
+    "usage": {
+     "input_tokens": 1632,
+     "output_tokens": 50,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSVd9nY6aTCgCSxcjLt2",
+    "latency_s": 2.54,
+    "prompt_sha256": "bda256cb496ae43f391bf987d4f7d8825990b0f0c7dbdf3e37f2a996523759c8",
+    "sim_step": 1596
+   },
+   {
+    "tag": "cl_verify_sg2",
+    "status": "ok",
+    "cost_usd": 0.007568,
+    "usage": {
+     "input_tokens": 1642,
+     "output_tokens": 50,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    },
+    "id": "msg_011CgSVdLmqhDETQ6A2bxxg4",
+    "latency_s": 2.8,
+    "prompt_sha256": "c5db3fe9bc63e2dfd5edb863aac9ec23c6281565f3af3461117b4fc6413ac05f",
+    "sim_step": 1596
+   }
+  ],
+  "decisions": [
+   {
+    "action": "execute",
+    "subgoal": "sg1",
+    "reason": "Nothing has moved yet and both subgoals are pending, so start the plan with sg1 (white mug onto the plate); the budget easily covers both subgoals.",
+    "n": 0,
+    "sim_step": 10
+   },
+   {
+    "action": "execute",
+    "subgoal": "sg2",
+    "reason": "The white mug now sits on the plate, as image 2 and the 'yes' check confirm. The chocolate pudding is still between the original mug spots rather than to the right of the plate. The 3286 remaining steps cover about one more subgoal, so run sg2 next.",
+    "n": 1,
+    "sim_step": 714
+   },
+   {
+    "action": "stop",
+    "subgoal": null,
+    "reason": "Both subgoals are completed and their checks passed: image 2 shows the white mug sitting on the plate and the chocolate pudding on the table just to the plate's right, so nothing is left to do.",
+    "n": 2,
+    "sim_step": 1596
+   }
+  ],
+  "checks": [
+   {
+    "subgoal": "sg1",
+    "clause": "the white mug is resting on top of the plate",
+    "verdict": "yes",
+    "evidence": "In image 2 the white mug has moved from its original left spot and now sits centered on the red-striped plate, supported by it.",
+    "sim_step": 714
+   },
+   {
+    "subgoal": "sg2",
+    "clause": "the chocolate pudding is on the table to the right of the plate, not on it",
+    "verdict": "yes",
+    "evidence": "In image 2 the chocolate pudding box sits on the table just right of the plate, at about x 518, y 410, and is not resting on the plate's surface.",
+    "sim_step": 1596
+   },
+   {
+    "subgoal": "sg1",
+    "clause": "the white mug is resting on top of the plate",
+    "verdict": "yes",
+    "evidence": "In image 2 the white textured mug sits centered on the red-striped plate, which is visible around its base.",
+    "sim_step": 1596
+   },
+   {
+    "subgoal": "sg2",
+    "clause": "the chocolate pudding is on the table to the right of the plate, not on it",
+    "verdict": "yes",
+    "evidence": "The chocolate pudding box sits on the table just right of the plate's rim, not on the plate itself.",
+    "sim_step": 1596
+   }
+  ],
+  "prompt_sha256": {
+   "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+   "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+   "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+  },
+  "plan_attempts": [
+   {
+    "plan_notes": "Two placements in instruction order: the white mug goes onto the plate (support centre, no side needed), then the chocolate pudding goes beside the plate on its right side. Both relations are implemented ('on' allows no side; 'beside' implements 'right'). No preparatory actions are needed, since the plate is clear in the initial image.",
+    "subgoals": [
+     {
+      "relation": "on",
+      "object": "white mug",
+      "reference": "plate",
+      "part": null,
+      "side": null,
+      "object_side": null,
+      "instance": null
+     },
+     {
+      "relation": "beside",
+      "object": "chocolate pudding",
+      "reference": "plate",
+      "part": null,
+      "side": "right",
+      "object_side": null,
+      "instance": null
+     }
+    ]
+   }
+  ],
+  "n_stack_calls": 6,
+  "plan": [
+   "sg1",
+   "sg2"
+  ],
+  "retries": {},
+  "replaced": {},
+  "stack_exception": null,
+  "results": {
+   "sg1": {
+    "status": "control_completed",
+    "failure_reason": null,
+    "verification_status": "shadow_recorded_only",
+    "object_possibly_retained": false,
+    "retry": false,
+    "replace": null
+   },
+   "sg2": {
+    "status": "control_completed",
+    "failure_reason": null,
+    "verification_status": "shadow_recorded_only",
+    "object_possibly_retained": false,
+    "retry": false,
+    "replace": null
+   }
+  },
+  "final_sim_step": 1596,
+  "cost_usd": 0.13266
+ },
+ "orch_llm_stats": {
+  "calls": 8,
+  "ok": 8,
+  "abstain_or_error": 0,
+  "cost_usd": 0.132664,
+  "latency_s": 60.80999999999999,
+  "usage": [
+   {
+    "input_tokens": 15433,
+    "output_tokens": 218,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2509,
+    "output_tokens": 77,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1632,
+    "output_tokens": 56,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2567,
+    "output_tokens": 110,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1642,
+    "output_tokens": 67,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 2544,
+    "output_tokens": 85,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1632,
+    "output_tokens": 50,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   {
+    "input_tokens": 1642,
+    "output_tokens": 50,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  ]
+ },
+ "orch_files_sha256": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "n_events": 642,
+ "n_samples": 1586,
+ "n_obs": 80,
+ "n_marks": 54,
+ "perception_calls": 43,
+ "recorder_errors": []
+}

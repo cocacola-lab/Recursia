@@ -1,0 +1,17 @@
+{"t": 1793091002.52, "sim_step": 220, "action": "close", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793091003.54, "sim_step": 250, "action": "close", "executed": true, "role": "dependent"}
+{"t": 1793091003.54, "sim_step": 250, "action": "transport", "allow": true, "why": "verified", "status": "verified"}
+{"t": 1793091003.619, "sim_step": 250, "action": "transport", "executed": true, "role": "dependent"}
+{"t": 1793091018.313, "sim_step": 650, "action": "open", "executed": true, "role": "tool_config"}
+{"t": 1793091070.621, "sim_step": 1158, "action": "close", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793091071.62, "sim_step": 1188, "action": "close", "executed": true, "role": "dependent"}
+{"t": 1793091071.621, "sim_step": 1188, "action": "lift", "allow": true, "why": "verified", "status": "verified"}
+{"t": 1793091073.648, "sim_step": 1248, "action": "lift", "executed": true, "role": "dependent"}
+{"t": 1793091074.635, "sim_step": 1278, "action": "open", "executed": true, "role": "recovery_open"}
+{"t": 1793091097.111, "sim_step": 1676, "action": "close", "allow": false, "why": "refused: status=stalled success=False detail=no_contact_no_arrival", "status": "stalled"}
+{"t": 1793091150.994, "sim_step": 2170, "action": "close", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793091151.951, "sim_step": 2200, "action": "close", "executed": true, "role": "dependent"}
+{"t": 1793091151.951, "sim_step": 2200, "action": "lift", "allow": true, "why": "verified", "status": "verified"}
+{"t": 1793091153.769, "sim_step": 2258, "action": "lift", "executed": true, "role": "dependent"}
+{"t": 1793091198.641, "sim_step": 2716, "action": "release", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793091199.915, "sim_step": 2746, "action": "release", "executed": true, "role": "dependent"}

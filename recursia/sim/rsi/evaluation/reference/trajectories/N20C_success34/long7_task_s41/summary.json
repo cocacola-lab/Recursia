@@ -1,0 +1,253 @@
+{
+ "arm_mode": "closed_loop_llm_orchestration",
+ "method": "inference method only; the learned stack is N20",
+ "cl_version": "n20c_closed_loop_v1_20261016",
+ "stack": {
+  "id": "N20",
+  "sha256": "29b187dfaffb4e1bc3a9e8d866637c552453a36fbc2f00691c78dc065f2d7cee"
+ },
+ "interface_version": "rsi_n20_iface_v2_20261016",
+ "code_hashes": {
+  "orch_stack.py": "b9bc4a6cbad6feee6b47c94d5b1f7b302797091291b3e740c5fdfd797474b41f",
+  "orch_check.py": "016f49f662231a4e693c8718e1c6f379d5390ac692feda2c8feafb0f671978f8",
+  "closed_loop.py": "dbbed02ef09decc61b3b51228a5768c03ab541ce134cc02882f7272456adf094"
+ },
+ "language": "put both the ketchup and the cream cheese box in the basket",
+ "replace_enabled": true,
+ "step_cost": 1109,
+ "fallback_to_baseline": false,
+ "outcome": "all_controls_completed",
+ "llm_calls": [
+  {
+   "tag": "cl_plan_0",
+   "status": "ok",
+   "cost_usd": 0.06566,
+   "usage": {
+    "input_tokens": 15435,
+    "output_tokens": 196,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWALjDbjmstvatBBgp7",
+   "latency_s": 9.53,
+   "prompt_sha256": "f72121694b0fbd18ae17c60e8ed61cca0722a3cd5d297456dcd5f5fd261b9c8b",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_decide_0_0",
+   "status": "ok",
+   "cost_usd": 0.01142,
+   "usage": {
+    "input_tokens": 2490,
+    "output_tokens": 73,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWCjZiKsqT49ocf8iZ3",
+   "latency_s": 3.11,
+   "prompt_sha256": "7f9edacc8464a29a6bc9aaf93cd5cfb5e6c6f82d2c18ec9727e7ee07613cc1e5",
+   "sim_step": 10
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.007632,
+   "usage": {
+    "input_tokens": 1623,
+    "output_tokens": 57,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWNVwhPixKWNVk58vfr",
+   "latency_s": 17.6,
+   "prompt_sha256": "918759f49554f6580878baa48a141552db78a283e30484cbad44e914af5429cf",
+   "sim_step": 926
+  },
+  {
+   "tag": "cl_decide_1_0",
+   "status": "ok",
+   "cost_usd": 0.012012,
+   "usage": {
+    "input_tokens": 2548,
+    "output_tokens": 91,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWPxqEVRMQV9cyjQz5h",
+   "latency_s": 20.72,
+   "prompt_sha256": "d6cf196290f194ff4818f93c82711d7b205bc8998c6fb4f084986c9eb960aab5",
+   "sim_step": 926
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.00806,
+   "usage": {
+    "input_tokens": 1625,
+    "output_tokens": 78,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWabgow8wDEatqknKSC",
+   "latency_s": 7.33,
+   "prompt_sha256": "f8ceb2e3881aca2d99bd6189bf0751dc1a03770625e2b5ed285e29d0903840dd",
+   "sim_step": 1725
+  },
+  {
+   "tag": "cl_decide_2_0",
+   "status": "ok",
+   "cost_usd": 0.012304,
+   "usage": {
+    "input_tokens": 2526,
+    "output_tokens": 110,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWaqVWZi5DLZpsipdu3",
+   "latency_s": 3.56,
+   "prompt_sha256": "0092956a29605f3f0ef7152a7d5a52339c0470bcdcc9aab709ab6dfa64db7213",
+   "sim_step": 1725
+  },
+  {
+   "tag": "cl_verify_sg1",
+   "status": "ok",
+   "cost_usd": 0.007731999999999999,
+   "usage": {
+    "input_tokens": 1623,
+    "output_tokens": 62,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWb5rTt29gXLgZSxnJm",
+   "latency_s": 3.96,
+   "prompt_sha256": "918759f49554f6580878baa48a141552db78a283e30484cbad44e914af5429cf",
+   "sim_step": 1725
+  },
+  {
+   "tag": "cl_verify_sg2",
+   "status": "ok",
+   "cost_usd": 0.00808,
+   "usage": {
+    "input_tokens": 1625,
+    "output_tokens": 79,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   },
+   "id": "msg_011CgSWbPRPygQB4civtsnsu",
+   "latency_s": 2.8,
+   "prompt_sha256": "f8ceb2e3881aca2d99bd6189bf0751dc1a03770625e2b5ed285e29d0903840dd",
+   "sim_step": 1725
+  }
+ ],
+ "decisions": [
+  {
+   "action": "execute",
+   "subgoal": "sg1",
+   "reason": "Nothing has been attempted yet and the ketchup is still on the table, so start the plan with sg1; the budget comfortably covers both subgoals.",
+   "n": 0,
+   "sim_step": 10
+  },
+  {
+   "action": "execute",
+   "subgoal": "sg2",
+   "reason": "The ketchup is now visibly in the basket (check yes), and the cream cheese box is still on the table; with 3074 steps left, enough for one ~1109-step attempt, sg2 should be executed next.",
+   "n": 1,
+   "sim_step": 926
+  },
+  {
+   "action": "stop",
+   "subgoal": null,
+   "reason": "Stop is the only allowed action; the ketchup is visibly in the basket, but the cream cheese box has vanished from the table and is not visible in the basket, and its check is only 'unsure', so the instruction may be only partly done and this should be flagged rather than reported as success.",
+   "n": 2,
+   "sim_step": 1725
+  }
+ ],
+ "checks": [
+  {
+   "subgoal": "sg1",
+   "clause": "the ketchup is inside the basket",
+   "verdict": "yes",
+   "evidence": "The ketchup bottle, previously on the table at left, now stands within the basket's walls, with only its top visible above the rim.",
+   "sim_step": 926
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the cream cheese box is inside the basket",
+   "verdict": "unsure",
+   "evidence": "The cream cheese box has left its spot on the table, but it is not visible in the basket, where only the ketchup can be seen; it may be hidden behind the ketchup or the basket walls.",
+   "sim_step": 1725
+  },
+  {
+   "subgoal": "sg1",
+   "clause": "the ketchup is inside the basket",
+   "verdict": "yes",
+   "evidence": "In image 2 the ketchup bottle is gone from the table and sits upright inside the basket, with its cap visible within the basket's walls.",
+   "sim_step": 1725
+  },
+  {
+   "subgoal": "sg2",
+   "clause": "the cream cheese box is inside the basket",
+   "verdict": "unsure",
+   "evidence": "The cream cheese box is gone from its original table spot and isn't visible anywhere, so it may be hidden inside the basket behind the ketchup and walls, but this can't be confirmed.",
+   "sim_step": 1725
+  }
+ ],
+ "prompt_sha256": {
+  "cl_plan_v1.md": "eebbe73d0b273febd36a63cb4c575ead85ab1815487ebc7144ed7ee28f5e2dde",
+  "cl_decide_v1.md": "691484cf794f0f51eb71d70f71e4f308921703ccc040e52936b7182117804d2b",
+  "cl_verify_v1.md": "a24d806e50618f25c78f55d2fbd2064ecc5e3ab5b7f7a046384d2a7af3031c51"
+ },
+ "plan_attempts": [
+  {
+   "plan_notes": "Two 'in' placements into the basket, in the instruction's order: ketchup first, then the cream cheese box. The basket is open and needs no preparation. The 'in' relation takes no side word, and each object is a single instance, so no side, object_side or instance is set.",
+   "subgoals": [
+    {
+     "relation": "in",
+     "object": "ketchup",
+     "reference": "basket",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    },
+    {
+     "relation": "in",
+     "object": "cream cheese box",
+     "reference": "basket",
+     "part": null,
+     "side": null,
+     "object_side": null,
+     "instance": null
+    }
+   ]
+  }
+ ],
+ "n_stack_calls": 6,
+ "plan": [
+  "sg1",
+  "sg2"
+ ],
+ "retries": {},
+ "replaced": {},
+ "stack_exception": null,
+ "results": {
+  "sg1": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  },
+  "sg2": {
+   "status": "control_completed",
+   "failure_reason": null,
+   "verification_status": "shadow_recorded_only",
+   "object_possibly_retained": false,
+   "retry": false,
+   "replace": null
+  }
+ },
+ "final_sim_step": 1725,
+ "cost_usd": 0.1329
+}

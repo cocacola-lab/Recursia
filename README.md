@@ -6,10 +6,12 @@ Recursia improves a shared executable Python stack from source-task feedback,
 then reuses the frozen stack on new task compositions. Improvements persist as
 programs rather than model-weight updates.
 
-This repository currently provides experiments on a Franka FR3 with a Franka
-Hand, including a Skill Document Only (SD-only) baseline. Simulation code will be added under `recursia/sim/`.
+This repository provides experiments on a Franka FR3 with a Franka
+Hand, including a Skill Document Only (SD-only) baseline, and simulation
+experiments under `recursia/sim/`: RSI on LIBERO-90 and zero-shot evaluation on
+LIBERO-Long-Pro with rule-based, one-shot and closed-loop inference.
 
-## Quick Start
+## Quick Start with Real-robot Setup
 
 Create the environment for the Franka FR3 workspace:
 
@@ -33,6 +35,43 @@ OPENFORGE_ALLOW_PHYSICAL_MOTION=1 python run_agent.py rsi source \
 
 See [Run](recursia/real/README.md#run) for the remaining chunks, SD-only baseline,
 and target evaluation.
+
+## Quick Start with Simulation Setup
+
+Reproduce the small interim LIBERO-Long-Pro evaluation (100 episodes) of the frozen N20 shared stack with closed-loop inference (reference: **35/100**). Clone the repository, export your key, and give Claude Code one sentence:
+
+```bash
+git clone https://github.com/cocacola-lab/Recursia.git && cd Recursia/recursia/sim
+export ANTHROPIC_API_KEY=...      # used only by the local model proxy
+claude "Set up the simulation and run the N20C interim Long-Pro evaluation, then report the success rate."
+```
+
+Claude Code follows [`recursia/sim/CLAUDE.md`](recursia/sim/CLAUDE.md):
+- fetches the pinned simulators and models, builds the environments and runs the tests;
+- starts the perception servers and the evaluation;
+- reports the result from `results/REPORT_auto.md`.
+
+You need Linux with NVIDIA GPUs, `uv`, and access to the gated [SAM3](https://huggingface.co/facebook/sam3) weights. The run takes about 2.5 h on 5 GPUs and costs about $15–20.
+
+<details>
+<summary>Manual commands</summary>
+
+```bash
+cd Recursia/recursia/sim
+bash scripts/fetch_third_party.sh
+uv venv .venv-libero --python 3.12 && source .venv-libero/bin/activate
+uv sync --locked --active --extra libero --extra contactgraspnet --extra dev && deactivate
+bash scripts/write_libero_config.sh
+uv venv .venv-vlmproxy --python 3.12 && uv pip install --python .venv-vlmproxy/bin/python3 "anthropic>=1.11"
+.venv-libero/bin/hf auth login
+tmux new -d -s recursia-perception "bash scripts/start_perception_servers.sh --gpu-sam3 0 --gpu-graspnet 1; sleep infinity"
+GPUS="3 4 5 6 7" bash rsi/evaluation/harness/quickstart.sh closed interim
+```
+</details>
+
+LLM and grasp sampling are not seed-controlled, so expect roughly 35–42.
+
+The same tool runs the other two inference methods: `quickstart.sh rule` (the stack's own rule-based driver) and `quickstart.sh oneshot`. [`recursia/sim/README.md`](recursia/sim/README.md) covers the full setup, all three evaluation methods, and new RSI debugging runs.
 
 ## Demonstrations
 
@@ -78,7 +117,7 @@ Recursia/
 │   │   ├── environment.yml
 │   │   ├── pyproject.toml
 │   │   └── run_agent.py
-│   └── sim/              # Reserved for future simulation experiments
+│   └── sim/              # Simulation: LIBERO runtime (cap/), RSI debugging and evaluation (rsi/), scripts, tests
 ├── assets/media/         # Selected target demonstration videos
 ├── LICENSES/
 ├── LICENSE
@@ -93,7 +132,8 @@ Runtime prompt code required by the agents is included.
 ## Contribution Guidelines
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Run the offline tests from `recursia/real/` when
-changing the physical runner. Keep simulation dependencies and coordinates
+changing the physical runner, and `.venv-libero/bin/python3 -m pytest -q` from `recursia/sim/` when changing the simulation
+workspace. Keep simulation dependencies and coordinates
 separate from real-robot configuration.
 
 ## Contact

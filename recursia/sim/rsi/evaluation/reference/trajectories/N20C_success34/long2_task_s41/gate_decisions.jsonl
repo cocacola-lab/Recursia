@@ -1,0 +1,11 @@
+{"t": 1793090750.869, "sim_step": 220, "action": "close", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793090751.785, "sim_step": 250, "action": "close", "executed": true, "role": "dependent"}
+{"t": 1793090751.786, "sim_step": 250, "action": "transport", "allow": true, "why": "verified", "status": "verified"}
+{"t": 1793090751.86, "sim_step": 250, "action": "transport", "executed": true, "role": "dependent"}
+{"t": 1793090766.008, "sim_step": 650, "action": "open", "executed": true, "role": "tool_config"}
+{"t": 1793090816.57, "sim_step": 1233, "action": "close", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793090817.597, "sim_step": 1263, "action": "close", "executed": true, "role": "dependent"}
+{"t": 1793090817.597, "sim_step": 1263, "action": "lift", "allow": true, "why": "verified", "status": "verified"}
+{"t": 1793090820.509, "sim_step": 1353, "action": "lift", "executed": true, "role": "dependent"}
+{"t": 1793090871.363, "sim_step": 1764, "action": "release", "allow": true, "why": "reached", "status": "reached"}
+{"t": 1793090872.333, "sim_step": 1794, "action": "release", "executed": true, "role": "dependent"}

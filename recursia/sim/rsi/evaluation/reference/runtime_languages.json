@@ -1,0 +1,25 @@
+{
+ "note": "Runtime instructions of the 20 Long-Pro tasks (seed 41), recorded from the N18 interim run; used by the offline tests only.",
+ "languages": {
+  "long0_swap": "put both the alphabet soup and the tomato sauce in the basket",
+  "long0_task": "put both the cream cheese and the tomato sauce in the basket",
+  "long1_swap": "put both the cream cheese box and the butter in the basket",
+  "long1_task": "put both the alphabet soup and the butter in the basket",
+  "long2_swap": "turn on the stove and put the moka pot on it",
+  "long2_task": "turn on the stove and put the pan on it",
+  "long3_swap": "put the black bowl in the bottom drawer of the cabinet and close it",
+  "long3_task": "put the bottle in the bottom drawer of the cabinet and close it",
+  "long4_swap": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+  "long4_task": "put the yellow and white mug on the left plate and put the white mug on the right plate",
+  "long5_swap": "pick up the book and place it in the back compartment of the caddy",
+  "long5_task": "pick up the cup and place it in the back compartment of the caddy",
+  "long6_swap": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+  "long6_task": "put the red mug on the plate and put the chocolate pudding to the right of the plate",
+  "long7_swap": "put both the alphabet soup and the cream cheese box in the basket",
+  "long7_task": "put both the ketchup and the cream cheese box in the basket",
+  "long8_swap": "put both moka pots on the stove",
+  "long8_task": "put the left moka pot on the stove",
+  "long9_swap": "put the yellow and white mug in the microwave and close it",
+  "long9_task": "put the white mug in the microwave and close it"
+ }
+}
